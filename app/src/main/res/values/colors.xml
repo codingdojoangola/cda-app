@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#F01818</color>
+    <color name="colorLogo">#F01818</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- NEW COLOR -->								<!-- RGB -->
+    <color name="Blue">#3079ab</color>
+    <color name="Indigo">#3F51B5</color>
+    <color name="Green">#51b46d</color>
+    <color name="Cyan">#53bbb4</color>
+    <color name="Deep_Purple">#7d669e</color>
+    <color name="Red">#e15258</color>
+    <color name="Orange">#f9845b</color>
+    <color name="Yellow">#e0ab18</color>
+    <color name="Blue_Grey">#607D8B</color>
+    <color name="Grey">#9E9E9E</color>
+
+    <!-- COLOR SPLASH -->
+    <color name="split_background">#263238</color>	            <!-- (38,46,54)  -->
+    <color name="split_sub">#313b45</color>
+    <color name="split_shades">#37474F</color>
+
+    !-- ANOTHER COLOR-->
+    <color name="gray">#808080</color>
+    <color name="gray40">#666666</color>			            <!-- (102,102,102)  -->
+    <color name="gray_shade">#dddada</color>
+    <color name="light_gray">#F2F2F2</color>
+    <color name="hex_gray">#2D2D2D</color>			            <!-- (45,45,45)  -->
+    <color name="hex_orange">#B14200</color>				    <!-- (177,66,0)  -->
+
+    <color name="Undefined">#b7c0c7</color>
+    <color name="ViewBackground">#f2f4f8</color>
+
+    <!-- ************************* Login and Register **********************-->
+    <color name="background_login">#407e7e7e</color>
+
+</resources>

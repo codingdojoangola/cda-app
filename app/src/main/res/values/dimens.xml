@@ -1,0 +1,101 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">35dp</dimen>
+    <dimen name="activity_vertical_margin">35dp</dimen>
+
+    <!--*************************** Strings related to login ************************************ -->
+    <dimen name="login_image_layout_heigth">125dp</dimen>
+
+    <dimen name="progressBar_layout_width">48dp</dimen>
+    <dimen name="progressBar_layout_height">48dp</dimen>
+
+
+    <!--*********************************** WELCOME ********************************************* -->
+    <dimen name="about_copyright_icon_layout_width">32px</dimen>
+    <dimen name="about_copyright_icon_layout_height">32px</dimen>
+
+    <dimen name="about_copyright_text_layout_marginLeft">5dp</dimen>
+    <dimen name="about_copyright_text_textSize">16sp</dimen>
+
+    <!-- ******************************** SPLIT **********************************  -->
+    <dimen name="split_layout_width">300dp</dimen>
+
+    <!-- :::::::::::: HEADER :::::::::::::: -->
+    <dimen name="nav_header_height">190dp</dimen>
+    <dimen name="header_image_layout_width">90dp</dimen>
+    <dimen name="header_image_layout_height">90dp</dimen>
+    <dimen name="header_image_layout_marginLeft">10dp</dimen>
+    <dimen name="header_image_layout_marginRight">10dp</dimen>
+
+    <dimen name="header_name_textSize">22sp</dimen>
+
+    <!-- :::::::::::: MENU SPLIT :::::::::::::: -->
+    <dimen name="nave_split_main_paddingTop">5dp</dimen>
+    <dimen name="nave_split_main_dividerHeight">5dp</dimen>
+
+    <dimen name="nave_split_item_type_padding">6dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_width">32dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_height">32dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_marginLeft">5dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_marginRight">5dp</dimen>
+
+    <dimen name="nave_split_item_type_name_padding">4dp</dimen>
+
+    <dimen name="nave_split_item_type_name_textSize">18sp</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_width">32px</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_height">32px</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_marginRight">4dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_width">32dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_height">32dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_marginRight">4dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_textSize">18sp</dimen>
+
+    <dimen name="nave_split_item_category_padding">6dp</dimen>
+    <dimen name="nave_split_item_category_name_paddingTop">3dp</dimen>
+    <dimen name="nave_split_item_category_name_paddingLeft">43dp</dimen>
+    <dimen name="nave_split_item_category_name_textSize">16sp</dimen>
+
+    <!-- ************************ Main Q-EVENTS - Action Bar ****************************** -->
+    <dimen name="main_bar_textSize">20sp</dimen>
+
+    <!-- :::::::::::: Customization Main :::::::::::::: -->
+    <dimen name="main_title_layout_marginLeft">5dp</dimen>
+    <dimen name="main_title_layout_marginStart">5dp</dimen>
+
+    <!-- :::::::::::: Popup Main :::::::::::::: -->
+    <dimen name="popup_main_textSize">15sp</dimen>
+
+    <!-- :::::: TitlePageIndicator - Main ::::::-->
+    <dimen name="main_titlePageIndicator_layout_height">45dp</dimen>
+    <dimen name="main_titlePageIndicator_padding">10dp</dimen>
+    <dimen name="main_table_titlePageIndicator_textSize">15sp</dimen>
+
+    <!-- ::::::::::::: ProgressBar Menu :::::::::::: -->
+    <dimen name="main_progressBar_layout_width">72dp</dimen>
+    <dimen name="main_progressBar_layout_height">72dp</dimen>
+
+
+    <!-- ******************************** PROFILE  **************************************** -->
+    <dimen name="view_event_image_width">768px</dimen>
+    <dimen name="view_event_image_height">660px</dimen>
+
+    <dimen name="collapsing_layout_titleMarginStartExpanded">6dp</dimen>
+    <dimen name="collapsing_layout_TitleMarginBottomExpanded">70dp</dimen>
+
+    <!-- ::::::::: ToolBar with Table ::::::::::::-->
+    <dimen name="view_toolbar_layout_height">110dp</dimen>
+    <dimen name="view_toolbar_titleMarginBottom">60dp</dimen>
+    <dimen name="view_toolbar_title_textSize">16sp</dimen>
+    <dimen name="view_toolbar_expandedAppBar_textSize">18sp</dimen>
+    <dimen name="view_toolbar_collapsedAppBar_textSize">16sp</dimen>
+
+    <!-- ::::::::: Table - Page Indicator ::::::::::::-->
+    <dimen name="view_table_titlePageIndicator_layout_height">55dp</dimen>
+    <dimen name="view_table_titlePageIndicator_tabIndicatorHeight">5dp</dimen>
+    <dimen name="view_table_titlePageIndicator_textSize">15sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+</resources>

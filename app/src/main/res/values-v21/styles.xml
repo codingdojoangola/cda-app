@@ -1,0 +1,66 @@
+<resources>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+
+        <!-- Customize your theme here. -->
+        <!-- This is the styling for action bar -->
+        <item name="actionBarStyle">@style/ActionBarText</item>
+        <!--To change the text styling of options menu items</item>-->
+        <!--To change the background of options menu-->
+    </style>
+
+    <!-- ************************* MAIN Q-EVENTS - ACTION BAR *********************************-->
+    <!-- Style for Titles Action Bar -->
+    <style name="ActionBarText" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/main_bar_textSize</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- ********************************** APPLICATION ************************************* -->
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyMaterialTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+
+    <!-- ************************* VIEW EVENTS - ACTION BAR *********************************-->
+    <!--  STYLE FOR TABLayout -   View Event  -->
+    <style name="tabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/view_table_titlePageIndicator_textSize</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ExpandedAppBar" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">@dimen/view_toolbar_expandedAppBar_textSize</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">@dimen/view_toolbar_collapsedAppBar_textSize</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+   
+    <!-- Modify Action Bar - android.support.v7.widget.Toolbar -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
