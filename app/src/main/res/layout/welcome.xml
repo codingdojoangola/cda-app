@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    tools:context="com.codingdojoangola.welcome.welcome">
+
+    <!-- *********************************** IMAGE USER ************************************* -->
+    <com.joooonho.SelectableRoundedImageView
+        android:id="@+id/user"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+
+        android:layout_marginTop="30dp"
+        android:src="@drawable/user_default_welcome"
+
+        app:sriv_border_color="@color/colorLogo"
+        app:sriv_border_width="2dp"
+        app:sriv_oval="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- ****************************** SUCCESS OR FAIL ************************************* -->
+    <!--::::::::::: SUCCESS ::::::: -->
+    <LinearLayout
+        android:id="@+id/success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_success"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_success"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/black"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/start"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="@string/start"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@color/Red"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_success"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_other_success"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <!--:::::::::::: FAIL ::::::::: -->
+    <LinearLayout
+        android:id="@+id/fail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_fail"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/Red"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_fail_pass"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/Red"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/try_again"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+
+            android:padding="12dp"
+            android:text="@string/try_again"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@color/Red"/>
+
+        <TextView
+            android:id="@+id/recover_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="12dp"
+            android:text="@string/recover_pass"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:textColor="@color/colorLogo"
+            android:clickable="true"/>
+
+
+    </LinearLayout>
+    <!-- ****************************** ALL RIGHTS RESERVED********************************** -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0"
+        android:layout_above="@+id/about_copyright"/>
+
+    <LinearLayout
+        android:id="@+id/about_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/about_copyright_icon_layout_width"
+            android:layout_height="@dimen/about_copyright_icon_layout_height"
+            android:src="@mipmap/copyright_small"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/about_copyright_text_layout_marginLeft"
+            android:layout_marginStart="@dimen/about_copyright_text_layout_marginLeft"
+            android:text="@string/company"
+            android:textSize="@dimen/about_copyright_text_textSize" />
+    </LinearLayout>
+
+    <!-- ************************************************************************************** -->
+</RelativeLayout>

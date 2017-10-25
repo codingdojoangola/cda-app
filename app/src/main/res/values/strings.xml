@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Coding Dojo Angola</string>
+
+    <!--*************************** Strings related to login ************************************ -->
+    <string name="sign_in">login</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="not_member">Not a member?</string>
+    <string name="up_now">Sign up now</string>
+
+    <!--************************** Strings related to Register *********************************** -->
+    <string name="sign_up">Register</string>
+    <string name="username">Username</string>
+    <string name="accept">I accept terms of the</string>
+    <string name="privacy_statement">privacy statement</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_member">Already a member?</string>
+
+    <!--*********************************** WELCOME ********************************************* -->
+    <string name="company">2017 Coding Dojo Angola Inc.</string>
+    <string name="title_success">Thanks for signing in </string>
+    <string name="subtitle_success">Let´s get started!</string>
+    <string name="start">Start</string>
+    <string name="other_success">Let it be a the</string>
+    <string name="sub_other_success">Greatest right ever!</string>
+
+    <string name="title_fail">Invalid credentials. Please check</string>
+    <string name="title_fail_pass">the email and password entered</string>
+    <string name="try_again">Tray Again</string>
+    <string name="recover_pass">Recover Password?</string>
+
+    <!--*********************************** PROFILE ************************************ -->
+    <string name="function">Developer Android</string>
+
+    <!--*************************** Other TEXT ************************************ -->
+    <string name="not_available">Image_logo</string>
+
+    <!-- :::::::::::: HEADER :::::::::::::: -->
+    <string name="welcome">Welcome</string>
+
+    <!-- :::::::::::: MENU SPLIT :::::::::::::: -->
+    <string name="home">Home</string>
+
+
+</resources>

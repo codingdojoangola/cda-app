@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codingdojoangola"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- ********************************** APPLICATION **************************************** -->
+    <application
+        android:name=".app.CDA"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+
+        <!-- ******************** ACTIVITY LOGIN ******************** -->
+        <activity
+            android:name=".welcome.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme.NoActionBar">
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ******************** ACTIVITY REGISTER ******************** -->
+        <activity
+            android:name=".welcome.Register"
+            android:label="@string/sign_up"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- ******************** ACTIVITY WELCOME ******************** -->
+        <activity
+            android:name=".welcome.welcome"
+            android:label="@string/welcome"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- ******************* ACTIVITY MAIN CDA ******************* -->
+        <activity
+            android:name=".app.MainCDA"
+            android:label="@string/home"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- ******************* ACTIVITY PROFILE ******************* -->
+        <activity
+            android:name=".welcome.Profile"
+            android:label="@string/welcome"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!-- ********************************************************* -->
+
+    </application>
+
+</manifest>
