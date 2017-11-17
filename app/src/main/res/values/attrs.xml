@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="canExpand" format="boolean" />
+        <attr name="startExpanded" format="boolean" />
+    </declare-styleable>
+
+    <!-- ******************************** SwitchButton  **************************************** -->
+    <declare-styleable name="SwitchButton">
+        <attr name="textSize" format="integer" />
+        <attr name="leftText" format="string" />
+        <attr name="rightText" format="string" />
+        <attr name="strokeWidth" format="integer" />
+        <attr name="roundRadius" format="integer" />
+        <attr name="Color" format="color" />
+        <attr name="backColor" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.codingdojoangola.R;
+import com.codingdojoangola.app.Profile;
 
 public class welcome extends AppCompatActivity {
 

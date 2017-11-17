@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.joooonho.SelectableRoundedImageView;
 
 public class Register extends AppCompatActivity {
 
@@ -43,6 +44,8 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
+        SelectableRoundedImageView selectableRoundedImageView = (SelectableRoundedImageView)findViewById(R.id.register_logo);
+        selectableRoundedImageView.bringToFront();
 
         nameText = (EditText)findViewById(R.id.input_name);
         emailText = (EditText)findViewById(R.id.input_email);
@@ -58,7 +61,7 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        TextView loginLink = (TextView)findViewById(R.id.loginLink);
+        View loginLink = findViewById(R.id.loginLink);
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -179,5 +182,17 @@ public class Register extends AppCompatActivity {
 
         //create_account.setEnabled(true);
     }
+
+
+    //**************** RETURN (NOT)
+    @Override
+    public void onBackPressed() {
+        intent = new Intent(Register.this, Login.class);
+        //setResult(RESULT_OK, intent);
+        //moveTaskToBack(true);
+        startActivity(intent);
+        finish();
+    }
+
     //*******************************************************************************************
 }
