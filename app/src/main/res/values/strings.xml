@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Coding Dojo Angola</string>
+    <string name="description">N/A</string>
+
+    <!--********************************* Strings Begin **************************************** -->
+    <string name="skip">Skip</string>
 
     <!--*************************** Strings related to login ************************************ -->
-    <string name="sign_in">login</string>
+    <string name="sign_in">Login</string>
     <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
@@ -21,6 +25,9 @@
     <!--************************** Strings related to Register *********************************** -->
     <string name="sign_up">Register</string>
     <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="invitation">Invitation Number</string>
     <string name="accept">I accept terms of the</string>
     <string name="privacy_statement">privacy statement</string>
     <string name="create_account">Create Account</string>
@@ -43,13 +50,81 @@
     <string name="function">Developer Android</string>
 
     <!--*************************** Other TEXT ************************************ -->
-    <string name="not_available">Image_logo</string>
+    <string name="not_available">N/A</string>
+   
+
+    <!-- ********************************** Main CDA ******************************************* -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- :::::::::::: HEADER :::::::::::::: -->
     <string name="welcome">Welcome</string>
-
+    
     <!-- :::::::::::: MENU SPLIT :::::::::::::: -->
     <string name="home">Home</string>
+    <string name="project">Project</string>
+    <string name="cda">CDA</string>
+    <string name="information">Information</string>
+    <string name="settings">Settings</string>
+    <string name="about">About App</string>
+    <string name="exit">Exit</string>
 
+    <!-- ::::::::::: SUB MENU ::::::::::::::::::-->
+    <string name="waiting">Waiting...</string>
+    
+    <string name="recent">Recent</string>
+    <string name="progress">Progress</string>
+    <string name="done">Done</string>
+    
+    <string name="members">Members</string>
+    <string name="to_register">How to Register?</string>
+    <string name="questions">Questions?</string>
+    
+    <string name="news">News</string>
+    <string name="blog">blog</string>
+
+    <!--  DIALOG - FRAGMENT -->
+    <string name="dialog_title">Confirmação</string>
+    <string name="dialog_message">Deseja sair CodingDojoAngola?</string>
+    <string name="button_no">Não</string>
+    <string name="button_yes">Sim</string>
+
+    <string name="network_download">Desligada. Por favor ligue e volte a tentar novamente!!!</string>
+
+    <!-- MONTHS-->
+    <string name="january">Janeiro</string>
+    <string name="february">Fevereiro</string>
+    <string name="march">Março</string>
+    <string name="april">Abril</string>
+    <string name="may">Maio</string>
+    <string name="june">Junho</string>
+    <string name="july">Julho</string>
+    <string name="august">Agosto</string>
+    <string name="september">Setembro</string>
+    <string name="october">Octubro</string>
+    <string name="november">Novembro</string>
+    <string name="december">Dezembro</string>
+
+    <string name="Jan">Jan</string>
+    <string name="Feb">Fev</string>
+    <string name="Mar">Mar</string>
+    <string name="Apr">Abr</string>
+    <string name="May">Mai</string>
+    <string name="June">Jun</string>
+    <string name="July">Jul</string>
+    <string name="Aug">Ago</string>
+    <string name="Sept">Set</string>
+    <string name="Oct">Out</string>
+    <string name="Nov">Nov</string>
+    <string name="Dec">Dez</string>
+
+    <!-- DAY OF WEEK -->
+    <string name="sunday">Domingo</string>
+    <string name="monday">Segunda</string>
+    <string name="tuesday">Terça</string>
+    <string name="wednesday">Quarta</string>
+    <string name="thursday">Quinta</string>
+    <string name="friday">Sexta</string>
+    <string name="saturday">Sábado</string>
 
 </resources>

@@ -26,7 +26,7 @@
         android:layout_marginTop="30dp"
         android:src="@drawable/user_default_welcome"
 
-        app:sriv_border_color="@color/colorLogo"
+        app:sriv_border_color="@color/colorPrimaryDark"
         app:sriv_border_width="2dp"
         app:sriv_oval="true"
         android:layout_alignParentTop="true"
@@ -128,7 +128,7 @@
             android:text="@string/recover_pass"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            android:textColor="@color/colorLogo"
+            android:textColor="@color/colorPrimaryDark"
             android:clickable="true"/>
 
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_background">
+
+    <com.joooonho.SelectableRoundedImageView
+        android:id="@+id/begin_image_logo"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/cda_image"
+        app:sriv_border_color="@color/white"
+        app:sriv_border_width="3dp"
+        app:sriv_oval="true"
+
+        android:layout_marginTop="65dp"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/begin_login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/begin_skip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/colorAccent"
+            android:text="@string/skip"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

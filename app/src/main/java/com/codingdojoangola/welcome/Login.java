@@ -11,7 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -78,6 +80,7 @@ public class Login extends AppCompatActivity{
         mLoginFormView = findViewById(R.id.sign_in_button);
         mProgressView = findViewById(R.id.login_progress);
 
+
         View create_account = findViewById(R.id.sign_up_now);
         create_account.setOnClickListener(new OnClickListener() {
             @Override
@@ -87,6 +90,7 @@ public class Login extends AppCompatActivity{
                 finish();
             }
         });
+
     }
 
     //******************************* TEST IF EMAIL AND PASSWORD IS VALID **************************
@@ -203,6 +207,19 @@ public class Login extends AppCompatActivity{
             mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
+    }
+
+    //**************** RETURN
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        intent = new Intent(Login.this, Begin.class);
+        //setResult(RESULT_OK, intent);
+        //moveTaskToBack(true);
+        startActivity(intent);
+
+        //Log.e("onBackPressed", "Será que estou  a chegar aqui!!!!!!!!!!!!!!!!!");
+        finish();
     }
     //**********************************************************************************************
 }
