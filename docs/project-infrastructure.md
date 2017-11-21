@@ -13,7 +13,7 @@ Github API will be used to retrieve CDA members projects and tickets.
 
 # 3. Code Guidelines
 We'll use the english language to write this app, that includes Java/Kotlin code, comments, commits, file names, etc, except the text related to UI that is primarily written in portuguese.
-Check the file 'project-and-code-guidelines.md' to learn about the code guideline that this project follow.
+Check the file [project-and-code-guidelines.md file](project-and-code-guidelines.md) to learn about the code guideline that this project follow.
 
 # 4. Directory structure:
 In the source code, clear responsibilities must be kept between the modules, and that begins with the directory structure. We're using the schema below (note though that this can evolve as needed):
