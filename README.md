@@ -1,2 +1,2 @@
 # cda-app
-App android para controle dos participantes do cda
+[Coding Dojo Angola](http://codingdojoangola.com) Android app
