@@ -1,100 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
-    <!-- Base application theme. -->
-    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <!-- This is the styling for action bar -->
-        <item name="actionBarStyle">@style/ActionBarTitle</item>
-        <!--To change the text styling of options menu items</item>-->
-        <!--To change the background of options menu-->
-    </style>
-
-    <!-- ************************* MAIN Q-EVENTS - ACTION BAR *********************************-->
-    <!-- Style for Titles Action Bar -->
-    <style name="ActionBarTitle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/main_bar_textSize</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <!-- ********************************** APPLICATION **************************************** -->
-    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
-    <style name="MyMaterialTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="editText_style">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">19sp</item>
-        <item name="android:textColorHint">@color/white</item>
-        <item name="android:ems">10</item>
-        <item name="android:layout_marginLeft">15dp</item>
-        <item name="android:layout_marginRight">15dp</item>
-    </style>
-
-    <style name="button_style">
-        <item name="android:background">@drawable/button_background</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:layout_margin">20dp</item>
-    </style>
-
-    <style name="textView_style">
-        <item name="android:gravity">center</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:layout_marginTop">20dp</item>
-    </style>
-
-    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorSecondary">@color/white</item>
-    </style>
-
-    <!-- ************************* VIEW EVENTS - ACTION BAR *********************************-->
-    <!--  STYLE FOR TABLayout -   View Event  -->
-    <style name="tabText" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">@dimen/view_table_titlePageIndicator_textSize</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <style name="ExpandedAppBar" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">@dimen/view_toolbar_expandedAppBar_textSize</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <style name="CollapsedAppBar" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">@dimen/view_toolbar_collapsedAppBar_textSize</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-
-    <!-- Modify Action Bar - android.support.v7.widget.Toolbar -->
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="MyMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <!-- *************************************************************************************** -->
 
 </resources>
