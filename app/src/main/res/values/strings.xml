@@ -12,7 +12,10 @@
     <!--::::::::::::::::: LOGIN ::::::::::::::: -->
     <string name="username">Nome de usuário</string>
 
-    <string name="action_sign_in">Sign in</string>
+    <string name="login">Entrar</string>
+    <string name="member">Não tens conta ?</string>
+    <string name="up_now">Inscreva-se</string>
+    <string name="login_description">Não tenho conta, fazer o registo</string>
 
     <!--::::::::::::::::: REGISTER ::::::::::::::: -->
     <string name="password">Palavra-passe</string>
@@ -24,7 +27,7 @@
     <string name="register">Inscrever-se</string>
     <string name="or">ou</string>
     <string name="github">Entrar com github</string>
-    <string name="already_member">já é membro?</string>
+    <string name="already_member">Já é membro ?</string>
     <string name="register_description">Ja tenho conta, fazer o login</string>
 
     <!--********************************* MAIN **************************************** -->

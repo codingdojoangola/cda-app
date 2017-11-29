@@ -24,7 +24,7 @@
 
         <!-- ******************** ACTIVITY LAUNCH ******************** -->
         <activity
-            android:name=".ui.launch.Splash"
+            android:name=".ui.launch.SplashActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">

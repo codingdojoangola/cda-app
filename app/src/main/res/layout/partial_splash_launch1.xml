@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash_background_one"
-    tools:context=".ui.launch.Splash">
+    tools:context=".ui.launch.SplashActivity">
 
     <!--************************************** LOGO  *************************************** -->
     <com.joooonho.SelectableRoundedImageView

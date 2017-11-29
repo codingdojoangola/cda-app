@@ -10,7 +10,7 @@ import com.codingdojoangola.R;
 import com.codingdojoangola.app.CDA;
 
 
-public class Splash extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     //:::::::::::: Constants
 
