@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fitsSystemWindows="true"
+    android:background="@drawable/register_background">
+
+    <!-- *************************************** IMAGE LOGO *********************************** -->
+    <com.joooonho.SelectableRoundedImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/cda_logo"
+        app:sriv_oval="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <!-- **************************************************************************************** -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/register_transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <!-- :::::::::::::::::::::::::: LABEL NAME :::::::::::::::::::::: -->
+        <EditText
+            android:id="@+id/editText_register_input_name"
+            style="@style/editText_style"
+            android:inputType="textPersonName"
+            android:hint="@string/username"
+            android:layout_marginTop="60dp"/>
+
+        <!-- :::::::::::::::::::::::::: LABEL EMAIL :::::::::::::::::::::::-->
+        <EditText
+            android:id="@+id/editText_register_input_email"
+            style="@style/editText_style"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email" />
+
+        <!-- :::::::::::::::::::::::: LABEL PASSWORD ::::::::::::::::::::: -->
+        <EditText
+            android:id="@+id/editText_register_input_password"
+            style="@style/editText_style"
+            android:inputType="textPassword"
+            android:hint="@string/password"/>
+
+        <!-- :::::::::::::::::::::: TERMS AND CONDITIONS :::::::::::::::::: -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkbox_register_accept_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/checkBoxStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ViewBackground"
+                android:text="@string/accept"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/privacy_statement"
+                android:textColor="@color/colorPrimaryDark"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <!-- ::::::::::::::::::::::: BUTTON SIGN_UP ::::::::::::::::::::::: -->
+        <Button
+            android:id="@+id/button_register_create_account"
+            style="@style/button_style"
+            android:text="@string/register" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+
+            android:text="@string/or"
+            android:textColor="@color/ViewBackground"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/button_register_account_gitHub"
+            style="@style/button_style"
+            android:text="@string/github" />
+
+        <!-- ::::::::::::::::::: ALREADY A MEMBER - LOGIN :::::::::::::::::::::: -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/already_member"
+                android:textColor="@color/ViewBackground"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_loginLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@mipmap/arrow_double_rigth_small"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/register_description"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- ********************************************************************************** -->
+
+</RelativeLayout>

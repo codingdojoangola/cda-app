@@ -10,9 +10,22 @@
     <string name="cda">Comunidade de desenvolvedores em Angola</string>
 
     <!--::::::::::::::::: LOGIN ::::::::::::::: -->
+    <string name="username">Nome de usuário</string>
 
+    <string name="action_sign_in">Sign in</string>
 
     <!--::::::::::::::::: REGISTER ::::::::::::::: -->
+    <string name="password">Palavra-passe</string>
+    <string name="email">Email</string>
+
+    <string name="accept">Li e aceito</string>
+    <string name="privacy_statement">os termos e condições</string>
+
+    <string name="register">Inscrever-se</string>
+    <string name="or">ou</string>
+    <string name="github">Entrar com github</string>
+    <string name="already_member">já é membro?</string>
+    <string name="register_description">Ja tenho conta, fazer o login</string>
 
     <!--********************************* MAIN **************************************** -->
 
