@@ -1,0 +1,59 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">35dp</dimen>
+    <dimen name="activity_vertical_margin">35dp</dimen>
+
+    <!--*********************************** LAUNCH *********************************************-->
+
+    <!--:::::::::::::::::::: SPLASH ::::::::::::::::::: -->
+    <dimen name="progressBar_layout_width">48dp</dimen>
+    <dimen name="progressBar_layout_height">48dp</dimen>
+
+
+    <!--::::::::::::::::: LOGIN ::::::::::::::: -->
+
+
+    <!--::::::::::::::::: REGISTER ::::::::::::::: -->
+
+    <!--********************************* MAIN **************************************** -->
+
+    <!-- ******************************** SPLIT **********************************  -->
+    <dimen name="split_layout_width">300dp</dimen>
+
+    <!-- :::::::::::: HEADER :::::::::::::: -->
+    <dimen name="nav_header_height">190dp</dimen>
+    <dimen name="header_image_layout_width">90dp</dimen>
+    <dimen name="header_image_layout_height">90dp</dimen>
+    <dimen name="header_image_layout_marginLeft">10dp</dimen>
+    <dimen name="header_image_layout_marginRight">10dp</dimen>
+
+    <dimen name="header_name_textSize">22sp</dimen>
+
+    <!-- :::::::::::: MENU SPLIT :::::::::::::: -->
+    <dimen name="nave_split_main_paddingTop">5dp</dimen>
+    <dimen name="nave_split_main_dividerHeight">5dp</dimen>
+
+    <dimen name="nave_split_item_type_padding">6dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_width">32dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_height">32dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_marginLeft">5dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_marginRight">5dp</dimen>
+
+    <dimen name="nave_split_item_type_name_padding">4dp</dimen>
+
+    <dimen name="nave_split_item_type_name_textSize">18sp</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_width">32px</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_height">32px</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_marginRight">4dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_width">32dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_height">32dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_marginRight">4dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_textSize">18sp</dimen>
+
+    <dimen name="nave_split_item_category_padding">6dp</dimen>
+    <dimen name="nave_split_item_category_name_paddingTop">3dp</dimen>
+    <dimen name="nave_split_item_category_name_paddingLeft">43dp</dimen>
+    <dimen name="nave_split_item_category_name_textSize">16sp</dimen>
+
+    <!-- **************************************************************************************  -->
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">CDA</string>
+    <string name="name">Coding Dojo Angola</string>
+
+    <!--********************************* LAUNCH **************************************** -->
+    <!--::::::::::::::::: SPLASH ::::::::::::::: -->
+    <string name="skip">Skip</string>
+    <string name="sign_in">Log in</string>
+    <string name="cda">Comunidade de desenvolvedores em Angola</string>
+
+    <!--::::::::::::::::: LOGIN ::::::::::::::: -->
+
+
+    <!--::::::::::::::::: REGISTER ::::::::::::::: -->
+
+    <!--********************************* MAIN **************************************** -->
+
+    <!--**************************************************************************************** -->
+</resources>
