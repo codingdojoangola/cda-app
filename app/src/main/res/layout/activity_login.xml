@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash_background_one">
@@ -16,12 +16,12 @@
 
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <!-- :::::::::::::::::::::::::: LABEL NAME :::::::::::::::::::::::::: -->
         <AutoCompleteTextView
-            android:id="@+id/autoComplete_login_name"
+            android:id="@+id/auto_complete_login_name"
             style="@style/editText_style"
             android:hint="@string/username"
             android:inputType="textEmailAddress"
@@ -30,7 +30,7 @@
 
         <!-- :::::::::::::::::::::::::: LABEL PASSWORD :::::::::::::::::::::: -->
         <EditText
-            android:id="@+id/editText_login_password"
+            android:id="@+id/edit_text_login_password"
             style="@style/editText_style"
             android:hint="@string/password"
             android:inputType="textPassword"
@@ -41,7 +41,8 @@
         <Button
             android:id="@+id/button_login_sign_in"
             style="@style/button_style"
-            android:text="@string/login" />
+            android:text="@string/login"
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -63,7 +64,7 @@
             android:id="@+id/not_member"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:layout_gravity="center"
@@ -72,7 +73,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/member"
+                android:text="@string/not_member"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/ViewBackground"/>
 
@@ -129,5 +130,20 @@
         android:layout_marginTop="50dp"
         android:visibility="invisible" />
 
+    <!-- ******************************** FRAGMENT REGISTER ************************************
+    <fragment
+        android:id="@+id/fragment_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_centerInParent="true"
+
+        tool:layout="@layout/fragment_register"
+        android:visibility="invisible">
+    </fragment>
+-->
     <!-- *************************************************************************************** -->
 </RelativeLayout>

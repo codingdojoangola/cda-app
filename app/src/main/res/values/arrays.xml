@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ************************************ LAUNCH ******************************************* -->
+    <!-- ::::::::::::  REGISTER ::::::::::::::: -->
+    <string-array name="code">
+        <item>@string/code_request</item>
+        <item>@string/code_submit</item>
+    </string-array>
+
+    <!-- ************************************ SPLIT ******************************************* -->
+    <!-- ::::::::::::  MENU ::::::::::::::: -->
+    <string-array name="drawer_icons">
+        <item>@mipmap/project</item>
+        <item>@mipmap/member</item>
+        <item>@mipmap/cda</item>
+        <item>@mipmap/settings</item>
+        <item>@mipmap/info</item>
+        <item>@mipmap/logout</item>
+    </string-array>
+
+    <string-array name="splitMenu">
+        <item>@string/project</item>
+        <item>@string/member</item>
+        <item>@string/cda</item>
+        <item>@string/settings</item>
+        <item>@string/about</item>
+        <item>@string/exit</item>
+    </string-array>
+
+    <!-- ********************************* MAIN CDA ****************************************** -->
+    <string-array name="subMenuProject">
+        <item>@string/recent</item>
+        <item>@string/progress</item>
+        <item>@string/done</item>
+    </string-array>
+
+    <string-array name="subMenuMember">
+        <item>@string/members</item>
+        <item>@string/to_register</item>
+        <item>@string/questions</item>
+    </string-array>
+
+    <string-array name="subMenuCDA">
+        <item>@string/news</item>
+        <item>@string/blog</item>
+    </string-array>
+
+    <!-- **************************************************************** -->
+    <!-- MONTHS-->
+    <string-array name="months">
+        <item>@string/january</item>
+        <item>@string/february</item>
+        <item>@string/march</item>
+        <item>@string/april</item>
+        <item>@string/may</item>
+        <item>@string/june</item>
+        <item>@string/july</item>
+        <item>@string/august</item>
+        <item>@string/september</item>
+        <item>@string/october</item>
+        <item>@string/november</item>
+        <item>@string/december</item>
+    </string-array>
+
+    <string-array name="abbreviate_months">
+        <item>@string/Jan</item>
+        <item>@string/Feb</item>
+        <item>@string/Mar</item>
+        <item>@string/Apr</item>
+        <item>@string/May</item>
+        <item>@string/June</item>
+        <item>@string/July</item>
+        <item>@string/Aug</item>
+        <item>@string/Sept</item>
+        <item>@string/Oct</item>
+        <item>@string/Nov</item>
+        <item>@string/Dec</item>
+    </string-array>
+
+    <!-- :::::::::::::::::: DAY OF WEEK ::::::::::::::::::::: -->
+    <string-array name="dayOfWeek">
+        <item>@string/sunday</item>
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+        <item>@string/saturday</item>
+    </string-array>
+    <!-- *************************************************************************************** -->
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <!-- ********************************* TITLE CODE *********************************** -->
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Código de Inscrição"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <!-- ********************************* SUBTITLE CODE *********************************** -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Use o seu email para receber um código de inscrição"
+        android:textSize="18sp"
+        android:textColor="@color/Grey"/>
+
+    <!-- ********************************* TITLE CODE *********************************** -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1" />
+
+    <!-- ********************************* TITLE CODE *********************************** -->
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimaryDark"
+
+        android:text="Proseguir"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/white"/>
+
+    <!-- *************************************************************************************** -->
+
+</LinearLayout>

@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.codingdojoangola.R;
 import com.codingdojoangola.app.CDA;
-import com.codingdojoangola.ui.login.LoginActivity;
+import com.codingdojoangola.ui.main.MainActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -33,11 +33,20 @@ public class SplashActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_splash);
 
         app = (CDA) getApplication();
 
-        startActivity(new Intent(this, LoginActivity.class));
+        // sleep for 1 seconds
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        startActivity(new Intent(this, MainActivity.class));
 
         /*
         //:::::::::::::: Loading :::::::::::::::

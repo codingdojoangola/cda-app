@@ -3,6 +3,7 @@ package com.codingdojoangola.app;
 import android.app.Application;
 
 import com.codingdojoangola.server.network.NetworkServer;
+import com.codingdojoangola.ui.split.MainDrawer;
 
 
 public class CDA extends Application {
@@ -30,7 +31,7 @@ public class CDA extends Application {
     protected void initSingletons() {
 
         NetworkServer.initInstance(this);
-        //MainDrawer.initInstance(this);
+        MainDrawer.initInstance(this);
     }
 
     //************************* GET AND SET **************************

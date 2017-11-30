@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/white"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <!--******************************   *************************************** -->
+    <include
+        layout="@layout/partial_fragment_register_request"
+        android:visibility="visible"/>
+
+    <!--******************************  ***************************************** -->
+    <include
+        layout="@layout/partial_fragment_register_submit"
+        android:visibility="invisible"/>
+
+    <!--*****************************************************************************************-->
+</android.support.v7.widget.CardView>

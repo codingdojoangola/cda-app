@@ -48,5 +48,7 @@ class UserSharedPreferences(context: Context) {
     // save login user photo
     var photoUrl = mPreferences.getString(PREF_PHOTO_URL_KEY, "")
         set(value) = mPreferences.edit().putString(PREF_PHOTO_URL_KEY, value).apply()
+
+    //**********************************************************************************************
 }
 

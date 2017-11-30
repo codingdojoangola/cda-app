@@ -1,4 +1,4 @@
-package com.codingdojoangola.ui.login;
+package com.codingdojoangola.ui.launch;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,8 +35,10 @@ import com.codingdojoangola.R;
 public class LoginActivity extends AppCompatActivity
         implements OnCompleteListener<AuthResult>, OnFailureListener {
 
+    //:::::::::::: Constants
     private static final String TAG = MainActivity.class.getSimpleName();
 
+    //::::::::::::: Fields
     private UserSharedPreferences mUserSharedPreferences;
     private FirebaseAuth mFirebaseAuth;
 
@@ -42,22 +46,28 @@ public class LoginActivity extends AppCompatActivity
     private EditText mPasswordEditText;
     private ProgressDialog mLoginProgressDialog;
 
+    //*********************************** ON CREATE *********************************************
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+         /* create a full screen window */
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_login);
 
-        mEmailAutoComplete = findViewById(R.id.autoComplete_login_name);
-        mPasswordEditText = findViewById(R.id.editText_login_password);
+        mEmailAutoComplete = findViewById(R.id.auto_complete_login_name);
+        mPasswordEditText = findViewById(R.id.edit_text_login_password);
         Button loginButton = findViewById(R.id.button_login_sign_in);
 
-        loginButton.setOnClickListener((View v) -> loginUser());
+        //loginButton.setOnClickListener((View v) -> loginUser());
 
         mLoginProgressDialog = new ProgressDialog(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
     }
 
+    //************************************** PUBLIC METHODS ****************************************
     /**
      * Called when the authentication process is completed (succeeded or failed)
      * @param task a Task object containing the result of the authentication process
@@ -88,6 +98,7 @@ public class LoginActivity extends AppCompatActivity
         mLoginProgressDialog.dismiss();
     }
 
+    //************************************** PRIVATE METHODS ***************************************
     /**
      * Tries to login the user using Firebase
      */
@@ -178,4 +189,5 @@ public class LoginActivity extends AppCompatActivity
         //mLoginFailureTextView.setVisibility(View.INVISIBLE);
         //mNetworkFailureTextView.setVisibility(View.VISIBLE);
     }
+    //**********************************************************************************************
 }

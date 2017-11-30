@@ -27,7 +27,7 @@
         android:layout_below="@+id/image_splash_logo"
         android:layout_marginTop="5dp"
         android:gravity="center_horizontal"
-        android:text="@string/cda"
+        android:text="@string/cda_description"
         android:textSize="18sp"
 
         android:textColor="@color/white"/>

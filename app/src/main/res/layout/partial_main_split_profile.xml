@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_split_profile"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/profile_background"
+    android:clickable="true"
+    android:focusable="true"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical">
+
+
+    <!--*********************************** IMAGE PROFILE *************************************** -->
+    <com.joooonho.SelectableRoundedImageView
+        android:id="@+id/image_navigation_split_profile"
+        android:layout_width="@dimen/header_image_layout_width"
+        android:layout_height="@dimen/header_image_layout_height"
+        android:scaleType="centerCrop"
+
+        android:layout_marginTop="40dp"
+
+        android:src="@mipmap/account_circle_white"
+        app:sriv_oval="true" />
+
+
+    <!--*********************************** NAME PROFILE **************************************** -->
+    <TextView
+        android:id="@+id/text_navigation_split_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+
+        android:text="Frederick Kiffen"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/white" />
+
+    <!--*********************************** WORK PROFILE **************************************** -->
+    <TextView
+        android:id="@+id/text_navigation_split_profile_working"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+
+        android:text="Desenvolvedor Android"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+    <!--**************************************************************************************** -->
+</LinearLayout>

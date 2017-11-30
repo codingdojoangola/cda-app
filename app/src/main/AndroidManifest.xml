@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/cda_logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/MyMaterialTheme">
 
         <!-- ******************** ACTIVITY LAUNCH ******************** -->
         <activity
@@ -37,19 +37,26 @@
 
         <!-- ******************** ACTIVITY LOGIN ******************** -->
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:name=".ui.launch.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/login"
+            android:screenOrientation="portrait"/>
 
 
         <!-- ******************** ACTIVITY REGISTER ******************** -->
-
+        <activity
+            android:name=".ui.launch.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/login"
+            android:screenOrientation="portrait"/>
 
 
         <!-- ******************* ACTIVITY MAIN CDA ******************* -->
         <activity android:name=".ui.main.MainActivity"
-            android:theme="@style/AppTheme" />
+            android:label="@string/project"
+            android:screenOrientation="portrait"/>
 
+        <!-- ************************************************************************************ -->
 
 
     </application>

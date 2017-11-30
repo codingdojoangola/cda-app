@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/split_menu"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/nave_split_item_type_padding"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <!--***************************************** IMAGE ICON ************************************-->
+    <ImageView
+        android:id="@+id/split_menu_icon"
+        android:layout_width="@dimen/nave_split_item_type_image_icon_layout_width"
+        android:layout_height="@dimen/nave_split_item_type_image_icon_layout_height"
+
+        android:icon="@mipmap/project"
+        android:layout_gravity="center_vertical"
+
+        android:layout_marginRight="@dimen/nave_split_item_type_image_icon_marginRight"
+        android:layout_marginEnd="@dimen/nave_split_item_type_image_icon_marginRight"
+
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/menu_description" />
+
+    <!--*****************************************  *************************************-->
+    <TextView
+        android:id="@+id/split_menu_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center_vertical"
+        android:padding="@dimen/nave_split_item_type_name_padding"
+
+        android:text="@string/project"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/nave_split_item_type_name_textSize"
+        android:typeface="normal"
+
+        tools:ignore="RtlHardcoded" />
+    <!--*****************************************************************************************-->
+</LinearLayout>

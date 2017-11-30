@@ -17,11 +17,11 @@
 
     <!--********************************* MAIN **************************************** -->
 
-    <!-- ******************************** SPLIT **********************************  -->
-    <dimen name="split_layout_width">300dp</dimen>
+    <!-- ::::::::::::::: SPLIT :::::::::::::::  -->
+    <dimen name="split_layout_width">320dp</dimen>
 
-    <!-- :::::::::::: HEADER :::::::::::::: -->
-    <dimen name="nav_header_height">190dp</dimen>
+    <!-- :::::::::::: HEADER PROFILE SPLIT :::::::::::::: -->
+    <dimen name="nav_header_height">200dp</dimen>
     <dimen name="header_image_layout_width">90dp</dimen>
     <dimen name="header_image_layout_height">90dp</dimen>
     <dimen name="header_image_layout_marginLeft">10dp</dimen>
@@ -29,11 +29,11 @@
 
     <dimen name="header_name_textSize">22sp</dimen>
 
-    <!-- :::::::::::: MENU SPLIT :::::::::::::: -->
+    <!-- :::::::::::::::: MENU SPLIT :::::::::::::::::::: -->
     <dimen name="nave_split_main_paddingTop">5dp</dimen>
     <dimen name="nave_split_main_dividerHeight">5dp</dimen>
 
-    <dimen name="nave_split_item_type_padding">6dp</dimen>
+    <dimen name="nave_split_item_type_padding">10dp</dimen>
     <dimen name="nave_split_item_type_image_icon_layout_width">32dp</dimen>
     <dimen name="nave_split_item_type_image_icon_layout_height">32dp</dimen>
     <dimen name="nave_split_item_type_image_icon_layout_marginLeft">5dp</dimen>
@@ -54,6 +54,37 @@
     <dimen name="nave_split_item_category_name_paddingTop">3dp</dimen>
     <dimen name="nave_split_item_category_name_paddingLeft">43dp</dimen>
     <dimen name="nave_split_item_category_name_textSize">16sp</dimen>
+
+    <!-- ********************************** Main CDA ******************************************* -->
+    <dimen name="main_bar_textSize">20sp</dimen>
+
+    <!-- :::::: TitlePageIndicator ::::::::::::-->
+    <dimen name="main_titlePageIndicator_layout_height">45dp</dimen>
+    <dimen name="main_titlePageIndicator_padding">10dp</dimen>
+    <dimen name="main_table_titlePageIndicator_textSize">15sp</dimen>
+
+
+    <!-- ******************************** PROFILE  **************************************** -->
+    <dimen name="view_event_image_width">768px</dimen>
+    <dimen name="view_event_image_height">660px</dimen>
+
+    <dimen name="collapsing_layout_titleMarginStartExpanded">6dp</dimen>
+    <dimen name="collapsing_layout_TitleMarginBottomExpanded">70dp</dimen>
+
+    <!-- ::::::::: ToolBar with Table ::::::::::::-->
+    <dimen name="view_toolbar_layout_height">110dp</dimen>
+    <dimen name="view_toolbar_titleMarginBottom">60dp</dimen>
+    <dimen name="view_toolbar_title_textSize">16sp</dimen>
+    <dimen name="view_toolbar_expandedAppBar_textSize">18sp</dimen>
+    <dimen name="view_toolbar_collapsedAppBar_textSize">16sp</dimen>
+
+    <!-- ::::::::: Table - Page Indicator ::::::::::::-->
+    <dimen name="view_table_titlePageIndicator_layout_height">55dp</dimen>
+    <dimen name="view_table_titlePageIndicator_tabIndicatorHeight">5dp</dimen>
+    <dimen name="view_table_titlePageIndicator_textSize">15sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 
     <!-- **************************************************************************************  -->
 </resources>
