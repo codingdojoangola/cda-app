@@ -1,5 +1,6 @@
 package com.codingdojoangola.ui.launch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
@@ -8,6 +9,7 @@ import android.widget.ProgressBar;
 
 import com.codingdojoangola.R;
 import com.codingdojoangola.app.CDA;
+import com.codingdojoangola.ui.login.LoginActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -34,6 +36,8 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         app = (CDA) getApplication();
+
+        startActivity(new Intent(this, LoginActivity.class));
 
         /*
         //:::::::::::::: Loading :::::::::::::::
