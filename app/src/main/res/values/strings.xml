@@ -29,6 +29,9 @@
     <string name="github">Entrar com github</string>
     <string name="already_member">Já é membro ?</string>
     <string name="register_description">Ja tenho conta, fazer o login</string>
+    <string name="login_wait_text">Efetuando login...</string>
+    <string name="invalid_email_error">Email inválido</string>
+    <string name="empty_password_error">Digite a palavra-passe</string>
 
     <!--********************************* MAIN **************************************** -->
 

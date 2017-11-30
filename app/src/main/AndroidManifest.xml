@@ -36,6 +36,10 @@
         </activity>
 
         <!-- ******************** ACTIVITY LOGIN ******************** -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
 
         <!-- ******************** ACTIVITY REGISTER ******************** -->
@@ -43,6 +47,8 @@
 
 
         <!-- ******************* ACTIVITY MAIN CDA ******************* -->
+        <activity android:name=".ui.main.MainActivity"
+            android:theme="@style/AppTheme" />
 
 
 
