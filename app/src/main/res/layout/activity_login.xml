@@ -144,6 +144,6 @@
         tool:layout="@layout/fragment_register"
         android:visibility="invisible">
     </fragment>
--->
+    -->
     <!-- *************************************************************************************** -->
 </RelativeLayout>

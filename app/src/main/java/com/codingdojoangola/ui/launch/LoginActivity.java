@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity
         mPasswordEditText = findViewById(R.id.edit_text_login_password);
         Button loginButton = findViewById(R.id.button_login_sign_in);
 
-        //loginButton.setOnClickListener((View v) -> loginUser());
+        loginButton.setOnClickListener((View v) -> loginUser());
 
         mLoginProgressDialog = new ProgressDialog(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
