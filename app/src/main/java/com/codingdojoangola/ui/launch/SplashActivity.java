@@ -14,6 +14,8 @@ import com.codingdojoangola.R;
 import com.codingdojoangola.app.CDA;
 import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
 import com.codingdojoangola.ui.main.MainActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class SplashActivity extends AppCompatActivity implements View.OnClickListener {
@@ -26,6 +28,8 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
     private View partialSplash1, partialSplash2;
     private UserSharedPreferences mUserSharedPreferences;
     private TextView mLoginButton, mSkipButton;
+    private FirebaseUser mCurrentUser;
+
     //*********************************** CONSTRUCTORS *********************************************
 
 
@@ -39,6 +43,9 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
         app = (CDA) getApplication();
+
+        //user currently logged in with firebase
+        mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // create login view
         mLoginButton = findViewById(R.id.begin_login);
@@ -54,7 +61,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         partialSplash2 = findViewById(R.id.active);
 
         // Check if user has email saved
-        if (mUserSharedPreferences.getEmail().isEmpty()){
+        if (mCurrentUser == null){
             partialSplash1.setVisibility(View.VISIBLE);
             partialSplash2.setVisibility(View.GONE);
         } else {
