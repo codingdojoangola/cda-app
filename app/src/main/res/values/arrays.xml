@@ -2,52 +2,23 @@
 <resources>
 
     <!-- ************************************ LAUNCH ******************************************* -->
-    <!-- ::::::::::::  REGISTER ::::::::::::::: -->
+    <!--::::::::::::::::: SPLASH ::::::::::::::::: -->
+
+
+    <!--::::::::::::::::: LOGIN :::::::::::::::::: -->
+
+
+    <!-- :::::::::::::::: REGISTER ::::::::::::::: -->
     <string-array name="code">
         <item>@string/code_request</item>
         <item>@string/code_submit</item>
     </string-array>
 
-    <!-- ************************************ SPLIT ******************************************* -->
-    <!-- ::::::::::::  MENU ::::::::::::::: -->
-    <string-array name="drawer_icons">
-        <item>@mipmap/project</item>
-        <item>@mipmap/member</item>
-        <item>@mipmap/cda</item>
-        <item>@mipmap/settings</item>
-        <item>@mipmap/info</item>
-        <item>@mipmap/logout</item>
-    </string-array>
 
-    <string-array name="splitMenu">
-        <item>@string/project</item>
-        <item>@string/member</item>
-        <item>@string/cda</item>
-        <item>@string/settings</item>
-        <item>@string/about</item>
-        <item>@string/exit</item>
-    </string-array>
+    <!-- ********************************* MAIN CDA ******************************************** -->
 
-    <!-- ********************************* MAIN CDA ****************************************** -->
-    <string-array name="subMenuProject">
-        <item>@string/recent</item>
-        <item>@string/progress</item>
-        <item>@string/done</item>
-    </string-array>
 
-    <string-array name="subMenuMember">
-        <item>@string/members</item>
-        <item>@string/to_register</item>
-        <item>@string/questions</item>
-    </string-array>
-
-    <string-array name="subMenuCDA">
-        <item>@string/news</item>
-        <item>@string/blog</item>
-    </string-array>
-
-    <!-- **************************************************************** -->
-    <!-- MONTHS-->
+    <!--:::::::: MONTHS ::::::::-->
     <string-array name="months">
         <item>@string/january</item>
         <item>@string/february</item>
@@ -88,5 +59,59 @@
         <item>@string/friday</item>
         <item>@string/saturday</item>
     </string-array>
+
+    <!--*************************************** ABOUT ****************************************** -->
+
+
+    <!--***************************************** CDA ****************************************** -->
+    <string-array name="subMenuCDA">
+        <item>@string/news</item>
+        <item>@string/blog</item>
+    </string-array>
+
+    <!--*************************************** MEMBERS **************************************** -->
+    <string-array name="subMenuMember">
+        <item>@string/members</item>
+        <item>@string/to_register</item>
+        <item>@string/questions</item>
+    </string-array>
+
+    <!--*********************************** NOTIFICATION *************************************** -->
+
+
+    <!--*************************************** PROFILE **************************************** -->
+
+
+    <!--*************************************** PROJECT **************************************** -->
+    <string-array name="subMenuProject">
+        <item>@string/recent</item>
+        <item>@string/progress</item>
+        <item>@string/done</item>
+    </string-array>
+
+
+    <!--*************************************** SETTING **************************************** -->
+
+
+    <!-- ************************************ SPLIT ******************************************** -->
+    <!-- ::::::::::::  MENU ::::::::::::::: -->
+    <string-array name="drawer_icons">
+        <item>@mipmap/project</item>
+        <item>@mipmap/member</item>
+        <item>@mipmap/cda</item>
+        <item>@mipmap/settings</item>
+        <item>@mipmap/info</item>
+        <item>@mipmap/logout</item>
+    </string-array>
+
+    <string-array name="splitMenu">
+        <item>@string/project</item>
+        <item>@string/member</item>
+        <item>@string/cda</item>
+        <item>@string/settings</item>
+        <item>@string/about</item>
+        <item>@string/exit</item>
+    </string-array>
+
     <!-- *************************************************************************************** -->
 </resources>

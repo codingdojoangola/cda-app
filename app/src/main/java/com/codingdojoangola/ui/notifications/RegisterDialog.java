@@ -1,11 +1,19 @@
 package com.codingdojoangola.ui.notifications;
 
+//:::::::::::::::: Android imports
+import android.os.Bundle;
+import android.content.DialogInterface;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
+
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+//:::::::::::::::: Java and javax
+
+//:::::::::::::::: Same project import
+
 
 import com.codingdojoangola.R;
 
@@ -17,7 +25,7 @@ public class RegisterDialog extends DialogFragment{
     //::::::::::::: Fields
 
 
-    //*********************************** CONSTRUCTORS *********************************************
+    //************************************* ON CREATE **********************************************
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 

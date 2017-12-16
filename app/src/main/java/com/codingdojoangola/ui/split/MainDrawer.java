@@ -1,13 +1,19 @@
 package com.codingdojoangola.ui.split;
 
+//:::::::::::::::: Android imports
 import android.content.Context;
 import android.content.res.TypedArray;
 
-import com.codingdojoangola.R;
-import com.codingdojoangola.models.split.ItemDrawer;
+//:::::::::::::::: Import from third parties (com, junit, net, org)
 
+
+//:::::::::::::::: Java and javax
 import java.util.ArrayList;
 import java.util.List;
+
+//:::::::::::::::: Same project import
+import com.codingdojoangola.R;
+import com.codingdojoangola.models.split.ItemDrawer;
 
 public class MainDrawer {
 

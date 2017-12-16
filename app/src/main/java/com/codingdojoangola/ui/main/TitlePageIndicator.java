@@ -1,5 +1,6 @@
 package com.codingdojoangola.ui.main;
 
+//:::::::::::::::: Android imports
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
@@ -20,9 +21,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.codingdojoangola.R;
+//:::::::::::::::: Import from third parties (com, junit, net, org)
 
+//:::::::::::::::: Java and javax
 import java.util.ArrayList;
+
+//:::::::::::::::: Same project import
+import com.codingdojoangola.R;
 
 /**
  * A TitlePageIndicator is a PageIndicator which displays the title of left view

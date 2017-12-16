@@ -1,10 +1,12 @@
 package com.codingdojoangola.ui.launch;
 
-import android.app.ProgressDialog;
+//:::::::::::::::: Android imports
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.app.ProgressDialog;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
@@ -14,18 +16,21 @@ import android.view.WindowManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
-import com.codingdojoangola.ui.main.MainActivity;
+//:::::::::::::::: Import from third parties (com, junit, net, org)
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+//:::::::::::::::: Java and javax
+
+//:::::::::::::::: Same project import
+import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
+import com.codingdojoangola.ui.main.MainActivity;
 
 import com.codingdojoangola.R;
 
@@ -39,7 +44,7 @@ public class LoginActivity extends AppCompatActivity
     private static final String TAG = MainActivity.class.getSimpleName();
 
     //::::::::::::: Fields
-    private UserSharedPreferences mUserSharedPreferences;
+    //private UserSharedPreferences mUserSharedPreferences;
     private FirebaseAuth mFirebaseAuth;
 
     private AutoCompleteTextView mEmailAutoComplete;

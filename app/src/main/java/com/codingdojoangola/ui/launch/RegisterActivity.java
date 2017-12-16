@@ -1,11 +1,17 @@
 package com.codingdojoangola.ui.launch;
 
-
+//:::::::::::::::: Android imports
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.Window;
 import android.view.WindowManager;
 
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+//:::::::::::::::: Java and javax
+
+//:::::::::::::::: Same project import
 import com.codingdojoangola.R;
 
 public class RegisterActivity extends AppCompatActivity{
@@ -33,11 +39,11 @@ public class RegisterActivity extends AppCompatActivity{
     //*********************** Override Methods and Callbacks (public and Private) ******************
 
 
-    //**************************** PUBLIC METHODS ****************************
+    //************************************* PUBLIC METHODS ****************************************
 
 
 
-    //**************************** PRIVATE METHODS ****************************
+    //************************************* PRIVATE METHODS ***************************************
 
 
 

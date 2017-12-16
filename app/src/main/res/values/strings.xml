@@ -4,7 +4,7 @@
     <string name="name">Coding Dojo Angola</string>
     <string name="not_available">N/A</string>
 
-    <!--********************************* LAUNCH **************************************** -->
+    <!-- ************************************ LAUNCH ******************************************* -->
     <!--::::::::::::::::: SPLASH ::::::::::::::: -->
     <string name="skip">Skip</string>
     <string name="sign_in">Log in</string>
@@ -41,18 +41,9 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
 
-    <!--********************************* MAIN **************************************** -->
+    <!-- ********************************* MAIN CDA ******************************************** -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <!--::::::::::::::::: SPLIT ::::::::::::::: -->
-    <string name="project">Projecto</string>
-    <string name="member">Membros</string>
-    <string name="cda">CDA</string>
-    <string name="settings">Definições</string>
-    <string name="about">Acerca da App</string>
-    <string name="exit">Sair</string>
-    <string name="menu_description">Icon</string>
 
     <!--::::::::::::: Title PageIndicator :::::::::-->
     <string name="recent">Recente</string>
@@ -65,14 +56,6 @@
 
     <string name="news">Noticias</string>
     <string name="blog">blog</string>
-
-    <!--  DIALOG - FRAGMENT -->
-    <string name="dialog_title">Confirmação</string>
-    <string name="dialog_message">Deseja sair CodingDojoAngola?</string>
-    <string name="button_no">Não</string>
-    <string name="button_yes">Sim</string>
-
-    <string name="network_download">Desligada. Por favor ligue e volte a tentar novamente!!!</string>
 
     <!--:::::::::::::::: MONTHS :::::::::::::::::-->
     <string name="january">Janeiro</string>
@@ -110,9 +93,50 @@
     <string name="friday">Sexta</string>
     <string name="saturday">Sábado</string>
 
-    <!-- ******************************** PROFILE  **************************************** -->
+    <!--*************************************** ABOUT ****************************************** -->
+
+
+
+    <!--***************************************** CDA ****************************************** -->
+
+
+    <!--*************************************** MEMBERS **************************************** -->
+
+
+
+    <!--*********************************** NOTIFICATION *************************************** -->
+    <!-- :::::: DIALOG EXIT - FRAGMENT :::::: -->
+    <string name="dialog_title">Confirmação</string>
+    <string name="dialog_message">Deseja sair Coding Dojo Angola?</string>
+    <string name="button_no">Não</string>
+    <string name="button_yes">Sim</string>
+
+    <string name="network_download">Desligada. Por favor ligue e volte a tentar novamente!!!</string>
+
+
+    <!--*************************************** PROFILE **************************************** -->
     <string name="function">Developer Android</string>
 
-    <!--**************************************************************************************** -->
+    <!--*************************************** PROJECT **************************************** -->
 
+
+    <!--*************************************** SETTING **************************************** -->
+
+
+    <!-- ************************************ SPLIT ******************************************** -->
+    <!-- :::::::::::: PROFILE ::::::::::::::: -->
+
+
+
+    <!-- ::::::::::::  MENU ::::::::::::::: -->
+    <string name="project">Projecto</string>
+    <string name="member">Membros</string>
+    <string name="cda">CDA</string>
+    <string name="settings">Definições</string>
+    <string name="about">Acerca da App</string>
+    <string name="exit">Sair</string>
+
+    <string name="menu_description">Icon</string>
+
+    <!-- *************************************************************************************** -->
 </resources>

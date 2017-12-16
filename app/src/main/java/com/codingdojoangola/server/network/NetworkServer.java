@@ -1,9 +1,19 @@
 package com.codingdojoangola.server.network;
 
+//:::::::::::::::: Android imports
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
+
+
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+
+//:::::::::::::::: Java and javax
+
+
+//:::::::::::::::: Same project import
 
 public class NetworkServer {
 
@@ -30,7 +40,6 @@ public class NetworkServer {
     private NetworkServer(Context context){
         this.context = context;
     }
-
 
     //*************************** Override Methods and Callbacks (public and Private) **************
 

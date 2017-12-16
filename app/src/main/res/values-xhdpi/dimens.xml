@@ -1,12 +1,19 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">35dp</dimen>
-    <dimen name="activity_vertical_margin">35dp</dimen>
+	
+    <!--
+         XHDPI – screens at least 720x1280 and nearer resolution
+         res/values-xhdpi/dimens.xml  (720x1280 - Samsung S3, Micromax Canvas HD, etc)
+    -->
 
     <!-- ************************************ LAUNCH ******************************************* -->
     <!--::::::::::::::::: SPLASH ::::::::::::::::: -->
-    <dimen name="progressBar_layout_width">48dp</dimen>
-    <dimen name="progressBar_layout_height">48dp</dimen>
+    <dimen name="splash_image_event_layout_height">100dp</dimen>
+
+    <dimen name="progressBar_layout_width">42dp</dimen>
+    <dimen name="progressBar_layout_height">42dp</dimen>
+
+    <dimen name="progressBarH_layout_width">200dp</dimen>
+    <dimen name="progressBarH_layout_marginTop">10dp</dimen>
 
     <!--::::::::::::::::: LOGIN :::::::::::::::::: -->
 
@@ -18,15 +25,38 @@
     <!-- ********************************* MAIN CDA ******************************************** -->
     <dimen name="main_bar_textSize">20sp</dimen>
 
-    <!-- :::::: TitlePageIndicator ::::::::::::-->
+    <!-- :::::::::::: Customization Main :::::::::::::: -->
+    <dimen name="main_title_layout_marginLeft">5dp</dimen>
+    <dimen name="main_title_layout_marginStart">5dp</dimen>
+
+    <!-- :::::::::::: Popup Main :::::::::::::: -->
+    <dimen name="popup_main_textSize">15sp</dimen>
+
+    <!-- :::::: TitlePageIndicator - Main ::::::-->
     <dimen name="main_titlePageIndicator_layout_height">45dp</dimen>
     <dimen name="main_titlePageIndicator_padding">10dp</dimen>
-    <dimen name="main_table_titlePageIndicator_textSize">15sp</dimen>
-
+    <dimen name="main_table_titlePageIndicator_textSize">14sp</dimen>
 
 
     <!--*************************************** ABOUT ****************************************** -->
+    <dimen name="about_name_app_layout_marginTop">150dp</dimen>
+    <dimen name="about_name_app_textSize">20sp</dimen>
 
+    <dimen name="about_version_app_layout_marginTop">3dp</dimen>
+    <dimen name="about_version_app_textSize">16sp</dimen>
+
+    <dimen name="about_image_logo_layout_height">100dp</dimen>
+    <dimen name="about_image_logo_layout_marginTop">12dp</dimen>
+
+    <dimen name="about_copyright_layout_marginTop">15dp</dimen>
+    <dimen name="about_copyright_icon_layout_width">32px</dimen>
+    <dimen name="about_copyright_icon_layout_height">32px</dimen>
+    <dimen name="about_copyright_text_layout_marginLeft">5dp</dimen>
+    <dimen name="about_copyright_text_textSize">16sp</dimen>
+
+    <dimen name="about_reserved_textSize">16sp</dimen>
+
+    <dimen name="about_license_textSize">16sp</dimen>
 
 
     <!--***************************************** CDA ****************************************** -->
@@ -40,26 +70,7 @@
 
 
     <!--*************************************** PROFILE **************************************** -->
-    <dimen name="view_event_image_width">768px</dimen>
-    <dimen name="view_event_image_height">660px</dimen>
 
-    <dimen name="collapsing_layout_titleMarginStartExpanded">6dp</dimen>
-    <dimen name="collapsing_layout_TitleMarginBottomExpanded">70dp</dimen>
-
-    <!-- ::::::::: ToolBar with Table ::::::::::::-->
-    <dimen name="view_toolbar_layout_height">110dp</dimen>
-    <dimen name="view_toolbar_titleMarginBottom">60dp</dimen>
-    <dimen name="view_toolbar_title_textSize">16sp</dimen>
-    <dimen name="view_toolbar_expandedAppBar_textSize">18sp</dimen>
-    <dimen name="view_toolbar_collapsedAppBar_textSize">16sp</dimen>
-
-    <!-- ::::::::: Table - Page Indicator ::::::::::::-->
-    <dimen name="view_table_titlePageIndicator_layout_height">55dp</dimen>
-    <dimen name="view_table_titlePageIndicator_tabIndicatorHeight">5dp</dimen>
-    <dimen name="view_table_titlePageIndicator_textSize">15sp</dimen>
-    <dimen name="app_bar_height">180dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
 
     <!--*************************************** PROJECT **************************************** -->
 
@@ -68,12 +79,12 @@
 
 
     <!-- ************************************ SPLIT ******************************************** -->
-    <dimen name="split_layout_width">320dp</dimen>
+    <dimen name="split_layout_width">300dp</dimen>
 
     <!-- :::::::::::: PROFILE ::::::::::::::: -->
-    <dimen name="nav_header_height">200dp</dimen>
-    <dimen name="header_image_layout_width">90dp</dimen>
-    <dimen name="header_image_layout_height">90dp</dimen>
+    <dimen name="nav_header_height">190dp</dimen>
+    <dimen name="header_image_layout_width">72dp</dimen>
+    <dimen name="header_image_layout_height">72dp</dimen>
     <dimen name="header_image_layout_marginLeft">10dp</dimen>
     <dimen name="header_image_layout_marginRight">10dp</dimen>
 
@@ -83,9 +94,9 @@
     <dimen name="nave_split_main_paddingTop">5dp</dimen>
     <dimen name="nave_split_main_dividerHeight">5dp</dimen>
 
-    <dimen name="nave_split_item_type_padding">10dp</dimen>
-    <dimen name="nave_split_item_type_image_icon_layout_width">32dp</dimen>
-    <dimen name="nave_split_item_type_image_icon_layout_height">32dp</dimen>
+    <dimen name="nave_split_item_type_padding">6dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_width">24dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_height">24dp</dimen>
     <dimen name="nave_split_item_type_image_icon_layout_marginLeft">5dp</dimen>
     <dimen name="nave_split_item_type_image_icon_marginRight">5dp</dimen>
 
@@ -104,7 +115,6 @@
     <dimen name="nave_split_item_category_name_paddingTop">3dp</dimen>
     <dimen name="nave_split_item_category_name_paddingLeft">43dp</dimen>
     <dimen name="nave_split_item_category_name_textSize">16sp</dimen>
-
 
     <!-- *************************************************************************************** -->
 </resources>

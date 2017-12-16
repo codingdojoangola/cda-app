@@ -1,10 +1,17 @@
 package com.codingdojoangola.app;
 
+//:::::::::::::::: Android imports
 import android.app.Application;
 
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+
+//:::::::::::::::: Java and javax
+
+
+//:::::::::::::::: Same project import
 import com.codingdojoangola.server.network.NetworkServer;
 import com.codingdojoangola.ui.split.MainDrawer;
-
 
 public class CDA extends Application {
 

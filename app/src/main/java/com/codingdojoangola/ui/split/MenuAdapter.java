@@ -1,5 +1,6 @@
 package com.codingdojoangola.ui.split;
 
+//:::::::::::::::: Android imports
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
@@ -10,10 +11,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+//:::::::::::::::: Java and javax
+import java.util.List;
+
+//:::::::::::::::: Same project import
 import com.codingdojoangola.R;
 import com.codingdojoangola.models.split.ItemDrawer;
-
-import java.util.List;
 
 public class MenuAdapter extends BaseAdapter{
 

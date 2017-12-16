@@ -1,16 +1,22 @@
 package com.codingdojoangola.ui.main;
 
+//:::::::::::::::: Android imports
+import android.content.Context;
+import android.os.AsyncTask;
+import android.content.DialogInterface;
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.AsyncTask;
-
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.ProgressBar;
 
+
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+//:::::::::::::::: Java and javax
+
+//:::::::::::::::: Same project import
 import com.codingdojoangola.R;
 import com.codingdojoangola.server.network.NetworkServer;
 
@@ -88,7 +94,7 @@ public class TransactionFragment extends AsyncTask<Void, Void, Void> {
 
         }else {
 
-            Transaction.replace(R.id.content_frame, FrameMain.newInstance(choiceType));
+            Transaction.replace(R.id.content_frame, MainFrameFragment.newInstance(choiceType));
             Transaction.commit();
             //Transaction.commitAllowingStateLoss();
         }

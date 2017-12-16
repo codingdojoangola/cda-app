@@ -1,0 +1,116 @@
+<resources>
+    <!-- **************************** SCREAM 5.5 **********************************-->
+
+    <!-- ************************************ LAUNCH ******************************************* -->
+    <!--::::::::::::::::: SPLASH ::::::::::::::::: -->
+    <dimen name="splash_image_event_layout_height">90dp</dimen>
+
+    <dimen name="progressBar_layout_width">42dp</dimen>
+    <dimen name="progressBar_layout_height">42dp</dimen>
+
+    <dimen name="progressBarH_layout_width">200dp</dimen>
+    <dimen name="progressBarH_layout_marginTop">10dp</dimen>
+
+    <!--::::::::::::::::: LOGIN :::::::::::::::::: -->
+
+
+    <!-- :::::::::::::::: REGISTER ::::::::::::::: -->
+
+
+
+    <!-- ********************************* MAIN CDA ******************************************** -->
+    <dimen name="main_bar_textSize">22sp</dimen>
+
+    <!-- :::::::::::: Customization Main :::::::::::::: -->
+    <dimen name="main_title_layout_marginLeft">5dp</dimen>
+    <dimen name="main_title_layout_marginStart">5dp</dimen>
+
+    <!-- :::::::::::: Popup Main :::::::::::::: -->
+    <dimen name="popup_main_textSize">16sp</dimen>
+
+    <!-- :::::: TitlePageIndicator - Main ::::::-->
+    <dimen name="main_titlePageIndicator_layout_height">45dp</dimen>
+    <dimen name="main_titlePageIndicator_padding">10dp</dimen>
+    <dimen name="main_table_titlePageIndicator_textSize">14sp</dimen>
+
+
+    <!--*************************************** ABOUT ****************************************** -->
+    <dimen name="about_name_app_layout_marginTop">180dp</dimen>
+    <dimen name="about_name_app_textSize">22sp</dimen>
+
+    <dimen name="about_version_app_layout_marginTop">3dp</dimen>
+    <dimen name="about_version_app_textSize">20sp</dimen>
+
+    <dimen name="about_image_logo_layout_height">90dp</dimen>
+    <dimen name="about_image_logo_layout_marginTop">12dp</dimen>
+
+    <dimen name="about_copyright_layout_marginTop">15dp</dimen>
+    <dimen name="about_copyright_icon_layout_width">64px</dimen>
+    <dimen name="about_copyright_icon_layout_height">64px</dimen>
+    <dimen name="about_copyright_text_layout_marginLeft">5dp</dimen>
+    <dimen name="about_copyright_text_textSize">20sp</dimen>
+
+    <dimen name="about_reserved_textSize">20sp</dimen>
+
+    <dimen name="about_license_textSize">20sp</dimen>
+
+
+    <!--***************************************** CDA ****************************************** -->
+
+
+    <!--*************************************** MEMBERS **************************************** -->
+
+
+
+    <!--*********************************** NOTIFICATION *************************************** -->
+
+
+    <!--*************************************** PROFILE **************************************** -->
+
+
+    <!--*************************************** PROJECT **************************************** -->
+
+
+    <!--*************************************** SETTING **************************************** -->
+
+
+    <!-- ************************************ SPLIT ******************************************** -->
+    <dimen name="split_layout_width">330dp</dimen>
+
+    <!-- :::::::::::: PROFILE ::::::::::::::: -->
+    <dimen name="nav_header_height">230dp</dimen>
+    <dimen name="header_image_layout_width">96dp</dimen>
+    <dimen name="header_image_layout_height">96dp</dimen>
+    <dimen name="header_image_layout_marginLeft">10dp</dimen>
+    <dimen name="header_image_layout_marginRight">10dp</dimen>
+
+    <dimen name="header_name_textSize">26sp</dimen>
+
+    <!-- :::::::::::::: MENU :::::::::::::::: -->
+    <dimen name="nave_split_main_paddingTop">5dp</dimen>
+    <dimen name="nave_split_main_dividerHeight">8dp</dimen>
+
+    <dimen name="nave_split_item_type_padding">6dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_width">30dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_height">30dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_layout_marginLeft">5dp</dimen>
+    <dimen name="nave_split_item_type_image_icon_marginRight">5dp</dimen>
+
+    <dimen name="nave_split_item_type_name_padding">4dp</dimen>
+
+    <dimen name="nave_split_item_type_name_textSize">18sp</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_width">48px</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_height">48px</dimen>
+    <dimen name="nave_split_item_type_image_expandableIcon_layout_marginRight">4dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_width">30dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_height">30dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_layout_marginRight">4dp</dimen>
+    <dimen name="nave_split_item_type_number_notify_textSize">18sp</dimen>
+
+    <dimen name="nave_split_item_category_padding">6dp</dimen>
+    <dimen name="nave_split_item_category_name_paddingTop">3dp</dimen>
+    <dimen name="nave_split_item_category_name_paddingLeft">45dp</dimen>
+    <dimen name="nave_split_item_category_name_textSize">18sp</dimen>
+
+    <!-- *************************************************************************************** -->
+</resources>

@@ -1,16 +1,20 @@
 package com.codingdojoangola.ui.launch;
 
+//:::::::::::::::: Android imports
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+//:::::::::::::::: Import from third parties (com, junit, net, org)
+
+//:::::::::::::::: Java and javax
+
+//:::::::::::::::: Same project import
 import com.codingdojoangola.R;
 
 public class RegisterFragment extends Fragment {
-
-
 
     //:::::::::::: Constants
 
@@ -30,11 +34,11 @@ public class RegisterFragment extends Fragment {
     //*********************** Override Methods and Callbacks (public and Private) ******************
 
 
-    //**************************** PUBLIC METHODS ****************************
+    //*************************************** PUBLIC METHODS ***************************************
 
 
 
-    //**************************** PRIVATE METHODS ****************************
+    //*************************************** PRIVATE METHODS **************************************
 
 
 

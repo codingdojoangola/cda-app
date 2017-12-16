@@ -1,37 +1,37 @@
 package com.codingdojoangola.ui.launch;
 
-import android.content.Intent;
+//:::::::::::::::: Android imports
 import android.os.Bundle;
+import android.os.AsyncTask;
 import android.os.Handler;
+
 import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.codingdojoangola.R;
-import com.codingdojoangola.app.CDA;
-import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
-import com.codingdojoangola.ui.main.MainActivity;
+//:::::::::::::::: Import from third parties (com, junit, net, org)
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+//:::::::::::::::: Java and javax
+import java.lang.ref.WeakReference;
+
+//:::::::::::::::: Same project import
+import com.codingdojoangola.R;
+import com.codingdojoangola.ui.main.MainActivity;
 
 public class SplashActivity extends AppCompatActivity implements View.OnClickListener {
 
     //:::::::::::: Constants
 
-
     //::::::::::::: Fields
-    private CDA app;
-    private View partialSplash1, partialSplash2;
-    private UserSharedPreferences mUserSharedPreferences;
-    private TextView mLoginButton, mSkipButton;
-    private FirebaseUser mCurrentUser;
-
-    //*********************************** CONSTRUCTORS *********************************************
-
+    //private CDA app;
+    //private UserSharedPreferences mUserSharedPreferences;
+    //private FirebaseUser mCurrentUser;
 
     //*********************** Override Methods and Callbacks (public and Private) ******************
     //::::::::::::::::::::::::::::::::::: OnCreate ::::::::::::::::::::::
@@ -42,63 +42,49 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-        app = (CDA) getApplication();
+        //app = (CDA) getApplication();
 
         //user currently logged in with firebase
-        mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // create login view
-        mLoginButton = findViewById(R.id.begin_login);
+        TextView mLoginButton = findViewById(R.id.begin_login);
         mLoginButton.setOnClickListener(this);
 
         // create skip views
-        mSkipButton = findViewById(R.id.begin_skip);
+        TextView mSkipButton = findViewById(R.id.begin_skip);
         mSkipButton.setOnClickListener(this);
 
-        mUserSharedPreferences = new UserSharedPreferences(this);
-
-        partialSplash1 = findViewById(R.id.activation);
-        partialSplash2 = findViewById(R.id.active);
+        //mUserSharedPreferences = new UserSharedPreferences(this);
 
         // Check if user has email saved
         if (mCurrentUser == null){
-            partialSplash1.setVisibility(View.VISIBLE);
-            partialSplash2.setVisibility(View.GONE);
+            // wait for 3 seconds
+            new MyTask(this).execute();
+
         } else {
-            // wait for 2 seconds
+            // wait for 3 seconds
             final Handler handler = new Handler();
-            handler.postDelayed(this::openMainActivity, 2000);
+            handler.postDelayed(this::openMainActivity, 3000);
         }
-
-
-        /*
-        //:::::::::::::: Loading :::::::::::::::
-        progressBarInfy = (ProgressBar) findViewById(R.id.splash_progressBarInfy);
-        progressBarFinite = (ProgressBar) findViewById(R.id.splash_progressBarFinite);
-
-        //update database -  Downloads Events
-        new Loading(this).execute();
-        */
     }
-
-    //**************************** PUBLIC METHODS ****************************
-
+    //************************************* PUBLIC METHODS *****************************************
 
 
-    //**************************** PRIVATE METHODS ****************************
-    // Open main activity if user exists
+    //************************************* PRIVATE METHODS ****************************************
+    //::::::::: Open main activity if user exists
     private void openMainActivity(){
         startActivity(new Intent(SplashActivity.this, MainActivity.class));
         finish();
     }
 
-    // open login activity
+    //::::::::: open login activity
     private void openLoginActivity(){
         startActivity(new Intent(SplashActivity.this, LoginActivity.class));
         finish();
     }
 
-    // click listeners for login and skip text views
+    //:::::::::: click listeners for login and skip text views
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -106,17 +92,49 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
                 openLoginActivity();
                 break;
             case R.id.begin_skip:
+                openMainActivity();
                 break;
         }
     }
 
-    //:::::::::::::::::::::::::::: Loading Class
-
-
-
     //***************************** INNER CLASSES OT INTERFACES ************************************
+    private static class MyTask extends AsyncTask<Void, Void, Void> {
 
+        private WeakReference<SplashActivity> activityReference;
 
+        //:::::: only retain a weak reference to the activity
+        MyTask(SplashActivity context) {
+            activityReference = new WeakReference<>(context);
+        }
+        //:::::: Override Methods and Callbacks
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            //sPartialSplash1.setVisibility(View.INVISIBLE);
+            //sPartialSplash2.setVisibility(View.VISIBLE);
+        }
 
+        @Override
+        protected Void doInBackground(Void... voids) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        @Override
+        protected void onPostExecute(Void result) {
+            // get a reference to the activity if it is still there
+            SplashActivity activity = activityReference.get();
+
+            View partialSplash1 = activity.findViewById(R.id.activation);
+            View partialSplash2 = activity.findViewById(R.id.active);
+
+            // modify the activity's UI
+            partialSplash1.setVisibility(View.VISIBLE);
+            partialSplash2.setVisibility(View.GONE);
+        }
+    }
     //**********************************************************************************************
 }
