@@ -12,6 +12,7 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -40,10 +41,8 @@ dependencies {
     compile 'com.android.support:support-v4:26.1.0'
 
     compile 'com.joooonho:selectableroundedimageview:1.0.1'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
     //SelectableRoundedImageView is available through Gradle
-
-    //
-    compile 'com.squareup.okhttp3:okhttp:3.7.0'
 
     // Fire Base
     compile 'com.google.firebase:firebase-crash:11.6.2'
@@ -56,3 +55,4 @@ apply plugin: 'com.google.gms.google-services'
 repositories {
     mavenCentral()
 }
+apply plugin: 'kotlin-android-extensions'

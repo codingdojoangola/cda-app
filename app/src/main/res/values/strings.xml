@@ -96,12 +96,10 @@
     <!--*************************************** ABOUT ****************************************** -->
 
 
-
     <!--***************************************** CDA ****************************************** -->
 
 
     <!--*************************************** MEMBERS **************************************** -->
-
 
 
     <!--*********************************** NOTIFICATION *************************************** -->
@@ -127,7 +125,6 @@
     <!-- :::::::::::: PROFILE ::::::::::::::: -->
 
 
-
     <!-- ::::::::::::  MENU ::::::::::::::: -->
     <string name="project">Projecto</string>
     <string name="member">Membros</string>
@@ -137,6 +134,16 @@
     <string name="exit">Sair</string>
 
     <string name="menu_description">Icon</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="white_belt_text">Cinto Branco</string>
+    <string name="yellow_belt_text">Cinto Amarelo</string>
+    <string name="orange_belt_text">Cinto Laranja</string>
+    <string name="green_belt_text">Cinto Verde</string>
+    <string name="blue_belt_text">Cinto Azul</string>
+    <string name="brown_belt_text">Cinto Castanho</string>
+    <string name="black_belt_text">Cinto Negro</string>
 
     <!-- *************************************************************************************** -->
 </resources>

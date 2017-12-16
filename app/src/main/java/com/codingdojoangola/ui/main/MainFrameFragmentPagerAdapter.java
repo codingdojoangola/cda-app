@@ -17,13 +17,15 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 public class MainFrameFragmentPagerAdapter extends FragmentStatePagerAdapter {
 
     private  String[] subMenu ;
+    private String mChoiceType;
 
 
     //********************************** Construct *****************************************************
-    public MainFrameFragmentPagerAdapter(FragmentManager fm, Context context, String [] subMenu) {
+    public MainFrameFragmentPagerAdapter(FragmentManager fm, Context context, String [] subMenu, String choiceType) {
         super(fm);
 
         this.subMenu = subMenu;
+        this.mChoiceType = choiceType;
     }
 
     //******************************************************************
@@ -42,7 +44,7 @@ public class MainFrameFragmentPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
 
         //Log.e("FrameAdapterPager", "SubMenu -> "+subMenu[position]);
-        return MainFramePagerFragment.newInstance(subMenu, position);
+        return MainFramePagerFragment.newInstance(subMenu, position, mChoiceType);
     }
 
     //**********************************************************************************************
