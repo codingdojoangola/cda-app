@@ -12,6 +12,7 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -39,7 +40,11 @@ dependencies {
     compile 'com.android.support:palette-v7:26.1.0'
     compile 'com.android.support:support-v4:26.1.0'
 
+    compile 'org.parceler:parceler-api:1.1.9'
+    annotationProcessor 'org.parceler:parceler:1.1.9'
+
     compile 'com.joooonho:selectableroundedimageview:1.0.1'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
     //SelectableRoundedImageView is available through Gradle
 
     // Fire Base
@@ -54,3 +59,4 @@ apply plugin: 'com.google.gms.google-services'
 repositories {
     mavenCentral()
 }
+apply plugin: 'kotlin-android-extensions'

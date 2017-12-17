@@ -7,11 +7,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-
+    <!-- *************************************************************************************** -->
     <!-- ********************************** APPLICATION **************************************** -->
     <application
         android:name=".app.CDA"
@@ -26,11 +24,11 @@
         <activity
             android:name=".ui.launch.SplashActivity"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -38,27 +36,33 @@
         <!-- ******************** ACTIVITY LOGIN ******************** -->
         <activity
             android:name=".ui.launch.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/login"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- ******************** ACTIVITY REGISTER ******************** -->
         <activity
             android:name=".ui.launch.RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/login"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- ******************* ACTIVITY MAIN CDA ******************* -->
-        <activity android:name=".ui.main.MainActivity"
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTop"
             android:label="@string/project"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <!-- ************************************************************************************ -->
 
-
+        <activity android:name=".ui.members.MemberDetailsActivity"
+            android:parentActivityName=".ui.main.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.main.MainActivity" />
+        </activity>
     </application>
-    <!-- *************************************************************************************** -->
+
 </manifest>

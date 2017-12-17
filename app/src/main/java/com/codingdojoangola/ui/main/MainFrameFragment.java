@@ -64,7 +64,7 @@ public class MainFrameFragment extends Fragment {
         }
 
         //---------- ListView by Sub-Menu -------------------------
-        frameAdapterPager = new MainFrameFragmentPagerAdapter(getFragmentManager(), inflater.getContext(), subMenu);
+        frameAdapterPager = new MainFrameFragmentPagerAdapter(getFragmentManager(), inflater.getContext(), subMenu, choiceType);
         frameAdapterPager.notifyDataSetChanged();
 
         // Set up the ViewPager with the sections adapter.

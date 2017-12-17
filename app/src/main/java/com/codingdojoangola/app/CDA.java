@@ -12,6 +12,7 @@ import android.app.Application;
 //:::::::::::::::: Same project import
 import com.codingdojoangola.server.network.NetworkServer;
 import com.codingdojoangola.ui.split.MainDrawer;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CDA extends Application {
 
@@ -39,6 +40,7 @@ public class CDA extends Application {
 
         NetworkServer.initInstance(this);
         MainDrawer.initInstance(this);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
     }
 
     //************************* GET AND SET **************************
