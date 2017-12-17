@@ -2,6 +2,9 @@ package com.codingdojoangola.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import org.parceler.Parcel;
+import org.parceler.ParcelConstructor;
+
 import java.util.ArrayList;
 
 /**
@@ -9,6 +12,7 @@ import java.util.ArrayList;
  */
 
 @IgnoreExtraProperties
+@Parcel(Parcel.Serialization.BEAN)
 public class Member {
 
     public enum Disponibility {
@@ -38,6 +42,7 @@ public class Member {
 
     public Member() {}
 
+    @ParcelConstructor
     public Member(String id, String name, BeltColor beltColor, ArrayList<Disponibility> disponibilities,
                   int concludedProjects, ArrayList<String> programmingLangs,
                   ArrayList<String> technologies, String photoUri) {

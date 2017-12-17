@@ -144,6 +144,15 @@
     <string name="blue_belt_text">Cinto Azul</string>
     <string name="brown_belt_text">Cinto Castanho</string>
     <string name="black_belt_text">Cinto Negro</string>
+    <string name="belt_text">Cinto</string>
+    <string name="projects_text">Projetos</string>
+    <string name="concluded_projects_text">Projetos Concluídos</string>
+    <string name="programming_languages_text">Linguagens</string>
+    <string name="technologies_text">Tecnologias</string>
+    <string name="disponibility_text">Disponibilidade</string>
+    <string name="full_time_text">Fulltime</string>
+    <string name="part_time_text">Part-Time</string>
+    <string name="freelancer_text">Freelancer</string>
 
     <!-- *************************************************************************************** -->
 </resources>

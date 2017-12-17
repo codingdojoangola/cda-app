@@ -2,6 +2,7 @@ package com.codingdojoangola.ui.members;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,13 +22,18 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import org.parceler.Parcels;
+
 import java.util.ArrayList;
 
-public class MembersFragment {
+public class MembersFragment implements MemberAdapter.MemberListItemClickListener {
 
     private final String TAG = MembersFragment.class.getName();
-    private final Context mContext;
 
+    public static final String EXTRA_MEMBER_DETAILS = "member_details";
+    private static final String MEMBERS_PATH = "members";
+
+    private final Context mContext;
     private RecyclerView mMembersRecyclerView;
     private FirebaseDatabase mFirebaseDatabase;
     private MemberAdapter mMemberAdapter;
@@ -36,20 +42,28 @@ public class MembersFragment {
         mContext = context;
         mMembersRecyclerView = membersFragment.findViewById(R.id.recyler_view_members);
 
-        mMemberAdapter = new MemberAdapter(mContext);
+        mMemberAdapter = new MemberAdapter(mContext, this);
         mMembersRecyclerView.setAdapter(mMemberAdapter);
         mMembersRecyclerView.setLayoutManager(
                 new LinearLayoutManager(membersFragment.getContext(),
                         LinearLayoutManager.VERTICAL, false));
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-
         getMembersFromDatabase();
+    }
+
+    @Override
+    public void onListItemClick(long position) {
+        Member memberClicked = mMemberAdapter.getData().get((int)position);
+
+        Intent memberDetailsIntent = new Intent(mContext, MemberDetailsActivity.class);
+        memberDetailsIntent.putExtra(EXTRA_MEMBER_DETAILS, Parcels.wrap(memberClicked));
+        mContext.startActivity(memberDetailsIntent);
     }
 
     private void getMembersFromDatabase() {
         DatabaseReference mDatabaseReference = mFirebaseDatabase.getReference();
-        DatabaseReference membersDir = mDatabaseReference.child("members");
+        DatabaseReference membersDir = mDatabaseReference.child(MEMBERS_PATH);
 
         ArrayList<Member> members = new ArrayList<>();
 
@@ -70,8 +84,6 @@ public class MembersFragment {
                 // NOT IMPLEMENTED
             }
         });
-
-
     }
 
     private void insertFakeData() {

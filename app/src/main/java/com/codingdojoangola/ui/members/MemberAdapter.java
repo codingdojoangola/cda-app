@@ -1,7 +1,9 @@
 package com.codingdojoangola.ui.members;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +22,13 @@ import java.util.List;
 public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberViewHolder> {
 
     private final Context mContext;
+    private final MemberListItemClickListener mClickListener;
     private ArrayList<Member> mMembers;
 
-    public MemberAdapter(Context context) {
+    public MemberAdapter(Context context, MemberListItemClickListener clickListener) {
         mMembers = new ArrayList<>();
         mContext = context;
+        mClickListener = clickListener;
     }
 
     @Override
@@ -36,20 +40,18 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
 
     @Override
     public void onBindViewHolder(MemberViewHolder holder, int position) {
-        String name = mMembers.get(position).getName();
-        ArrayList<String> programmingLangs = mMembers.get(position).getProgrammingLangs();
-        String beltColor = convertBeltToReadableString(
-                mMembers.get(position).getBeltColor(), mContext);
+
+        Member currentMember = mMembers.get(position);
+
+        String name = currentMember.getName();
+        int concludedProjects = currentMember.getConcludedProjects();
+        ArrayList<String> programmingLangs = currentMember.getProgrammingLangs();
 
         holder.mNameTextView.setText(name);
-        holder.mBeltColorTextView.setText(beltColor);
+        holder.mConcludedProjectsNumber.setText(String.valueOf(concludedProjects));
 
-        String langsString = "";
-        for (String lang : programmingLangs) {
-            langsString = langsString.concat(lang + " ");
-        }
-
-        holder.mProgrammingLanguagesTextView.setText(langsString);
+        String langs = TextUtils.join(", ", programmingLangs.toArray());
+        holder.mProgrammingLanguagesTextView.setText(langs);
     }
 
     @Override
@@ -62,38 +64,36 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
         notifyDataSetChanged();
     }
 
-    private String convertBeltToReadableString(Member.BeltColor beltColor, Context context) {
-        switch (beltColor) {
-            case WHITE:
-                return context.getString(R.string.white_belt_text);
-            case YELLOW:
-                return context.getString(R.string.yellow_belt_text);
-            case ORANGE:
-                return context.getString(R.string.orange_belt_text);
-            case GREEN:
-                return context.getString(R.string.green_belt_text);
-            case BLUE:
-                return context.getString(R.string.blue_belt_text);
-            case BROWN:
-                return context.getString(R.string.brown_belt_text);
-            case BLACK:
-                return context.getString(R.string.black_belt_text);
-            default:
-                throw new IllegalArgumentException("Unknown belt color: " + beltColor.toString());
-        }
+    public ArrayList<Member> getData() {
+        return mMembers;
     }
 
-    class MemberViewHolder extends RecyclerView.ViewHolder {
+    class MemberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView mNameTextView;
-        private TextView mBeltColorTextView;
         private TextView mProgrammingLanguagesTextView;
+        private TextView mConcludedProjectsNumber;
 
         public MemberViewHolder(View itemView) {
             super(itemView);
+
             mNameTextView = itemView.findViewById(R.id.text_name);
-            mBeltColorTextView = itemView.findViewById(R.id.text_belt_color);
             mProgrammingLanguagesTextView = itemView.findViewById(R.id.text_programming_languages);
+            mConcludedProjectsNumber = itemView.findViewById(R.id.text_concluded_projects_number);
+
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            long clickedPosition = getAdapterPosition();
+            if (clickedPosition != RecyclerView.NO_POSITION) {
+                mClickListener.onListItemClick(clickedPosition);
+            }
+        }
+    }
+
+    public interface MemberListItemClickListener {
+        void onListItemClick(long position);
     }
 }
