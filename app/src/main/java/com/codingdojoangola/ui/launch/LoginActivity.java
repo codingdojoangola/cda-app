@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.app.ProgressDialog;
 
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
