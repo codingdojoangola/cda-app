@@ -76,6 +76,13 @@
             android:label="@string/project"
             android:screenOrientation="portrait" />
 
+        <!-- ******************* ACTIVITY MAIN CDA ******************* -->
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ui.main.MainActivity">
+        </activity>
+
         <!-- ************************************************************************************ -->
 
         <activity

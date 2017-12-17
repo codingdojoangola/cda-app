@@ -4,7 +4,8 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_background_one">
+    android:background="@drawable/splash_background_one"
+    android:id="@+id/activity_login_layout">
 
     <!-- **************************************************************************************** -->
     <LinearLayout
@@ -57,7 +58,8 @@
         <Button
             android:id="@+id/button_login_gitHub"
             style="@style/button_style_gitHub"
-            android:text="@string/github" />
+            android:text="@string/github"
+            android:onClick="sendLoginGithubData"/>
 
         <!-- :::::::::::::::::::::::: NOT A MEMBER - REGISTER ::::::::::::: -->
         <LinearLayout
@@ -101,6 +103,7 @@
                     android:layout_marginStart="5dp"
                     android:src="@mipmap/arrow_double_rigth_small"
                     android:layout_gravity="center"
+                    android:onClick="startRegistration"
                     android:contentDescription="@string/login_description"/>
             </LinearLayout>
         </LinearLayout>

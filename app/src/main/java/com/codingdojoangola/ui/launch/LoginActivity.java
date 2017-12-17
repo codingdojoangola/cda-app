@@ -1,28 +1,37 @@
 package com.codingdojoangola.ui.launch;
 
 //:::::::::::::::: Android imports
+import android.app.Dialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.app.ProgressDialog;
 
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 //:::::::::::::::: Import from third parties (com, junit, net, org)
+import com.alorma.github.sdk.bean.dto.response.Token;
+import com.alorma.github.sdk.bean.dto.response.User;
+import com.alorma.github.sdk.services.login.RequestTokenClient;
+import com.alorma.github.sdk.services.user.GetAuthUserClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,8 +41,13 @@ import com.google.firebase.auth.FirebaseUser;
 //:::::::::::::::: Same project import
 import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
 import com.codingdojoangola.ui.main.MainActivity;
-
 import com.codingdojoangola.R;
+import com.google.firebase.auth.GithubAuthProvider;
+import com.google.firebase.crash.FirebaseCrash;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import rx.Observer;
 
 /**
  * The activity responsible for login in the user
@@ -54,6 +68,8 @@ public class LoginActivity extends AppCompatActivity
     public static int deviceWidth;
 
 
+    private DatabaseReference mDatabaseReference;
+
     //*********************************** ON CREATE *********************************************
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +89,7 @@ public class LoginActivity extends AppCompatActivity
 
         mLoginProgressDialog = new ProgressDialog(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         DisplayMetrics metrics = getApplicationContext().getResources().getDisplayMetrics();
         deviceWidth = metrics.widthPixels;
     }
@@ -88,11 +105,9 @@ public class LoginActivity extends AppCompatActivity
         if (task.isSuccessful()) {
             Toast.makeText(this, "Succesfull loginUser", Toast.LENGTH_SHORT).show();
             saveUserData(mFirebaseAuth.getCurrentUser());
-
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
+            callMainActivity();
         } else {
-            showLoginFailedMessage();
+            showSnackbar("Login with email & password failed");
         }
 
         mLoginProgressDialog.dismiss();
@@ -108,7 +123,162 @@ public class LoginActivity extends AppCompatActivity
         mLoginProgressDialog.dismiss();
     }
 
+    /**
+     * Starter of GitHub authentication
+     * @param view
+     */
+    public void sendLoginGithubData( View view ){
+        //Create github url to with to make the OAuth authentication
+        FirebaseCrash.log("LoginActivity:clickListener:button:sendLoginGithubData()");
+        Uri uri = new Uri.Builder()
+                .scheme("https")
+                .authority("github.com")
+                .appendPath("login")
+                .appendPath("oauth")
+                .appendPath("authorize")
+                .appendQueryParameter("client_id", getString(R.string.github_app_id))
+                .appendQueryParameter("&scope", "user,user:email")
+                .build();
+
+
+        //This is the dialog used for displaying the web view below
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_github_webview);
+        dialog.setTitle("Login with Github");
+        dialog.setCancelable(true);
+        dialog.show();
+
+        //web view which displays all the github auth process
+        WebView webView = dialog.findViewById(R.id.github_webview);
+        webView.loadUrl( uri.toString() );
+        webView.requestFocus(View.FOCUS_DOWN);
+        webView.getSettings().setNeedInitialFocus(true);
+        webView.requestFocus();
+        webView.setFocusable(true);
+        webView.findFocus();
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+
+                Uri uri = Uri.parse(url);
+
+                if( uri.getQueryParameter("code") != null
+                        && uri.getScheme() != null
+                        && uri.getScheme().equalsIgnoreCase("https") ){
+
+                    requestGitHubUserAccessToken( uri.getQueryParameter("code") );
+                }
+
+                return super.shouldOverrideUrlLoading(view, url);
+            }
+        });
+    }
+
     //************************************** PRIVATE METHODS ***************************************
+
+    private void accessGithubLoginData(String accessToken, User githubUser){
+        String provider = "github";
+            AuthCredential credential = GithubAuthProvider.getCredential(accessToken);
+            credential = provider.equalsIgnoreCase("github") ? GithubAuthProvider.getCredential( accessToken ) : credential;
+            //user.saveProviderSP( LoginActivity.this, provider );
+            mFirebaseAuth.signInWithCredential(credential)
+                    .addOnCompleteListener(this, task -> {
+                        Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
+                        saveUserGithubData("name", githubUser.name);
+                        saveUserGithubData("email", githubUser.email);
+                        saveUserGithubData("company", githubUser.company);
+                        saveUserGithubData("createdAt", String.valueOf(githubUser.created_at));
+                        saveUserGithubData("bio", githubUser.bio);
+                        saveUserGithubData("location", githubUser.location);
+                        saveUserGithubData("numOfRepos", String.valueOf(githubUser.public_repos));
+                        saveUserGithubData("followers", String.valueOf(githubUser.followers));
+                        callMainActivity();
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "signInWithCredential", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
+    }
+
+    /**
+     * Method used to make the connection of the github account and the firebase OAuth
+     **/
+    private void requestGitHubUserAccessToken( String code ){
+        RequestTokenClient requestTokenClient = new RequestTokenClient(
+                code,
+                getString(R.string.github_app_id),
+                getString(R.string.github_app_secret),
+                getString(R.string.github_app_url)
+        );
+
+        requestTokenClient
+                .observable()
+                .subscribe(new Observer<Token>() {
+                    @Override
+                    public void onCompleted() {}
+
+                    @Override
+                    public void onError(Throwable e) {
+                        //showSnackbar( e.getMessage() );
+                    }
+
+                    @Override
+                    public void onNext(Token token) {
+                        if( token.access_token != null ){
+                            requestGitHubUserData( token.access_token );
+                        }
+                    }
+                });
+    }
+
+    /**
+     * Getting accessible data from the user's github account with the use of 'com.github.alorma:github-sdk:3.2.5'
+     **/
+    private void requestGitHubUserData( final String accessToken ){
+        GetAuthUserClient getAuthUserClient = new GetAuthUserClient( accessToken );
+        getAuthUserClient
+                .observable()
+                .subscribe(new Observer<User>() {
+                    @Override
+                    public void onCompleted() {}
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(com.alorma.github.sdk.bean.dto.response.User user) {
+                        accessGithubLoginData( accessToken, user );
+                    }
+                });
+
+    }
+
+    /**
+     * This method saves the github user's account to firebase realtime database
+     * @param child means the name of the node on the users database
+     * @param value is the data that child carries
+     */
+    private void saveUserGithubData(String child, String value) {
+        if (mFirebaseAuth.getCurrentUser() != null)
+            mDatabaseReference.child("users").child(mFirebaseAuth.getCurrentUser().getUid()).child(child).setValue(value);
+    }
+
+    /**
+     * This method starts the main activity and finishes
+     * and finishes this current activity
+     */
+    private void callMainActivity(){
+        Intent intent = new Intent( this, MainActivity.class );
+        startActivity(intent);
+        finish();
+    }
+
     /**
      * Tries to login the user using Firebase
      */
@@ -184,20 +354,13 @@ public class LoginActivity extends AppCompatActivity
         return validFields;
     }
 
-    /**
-     * Show a text indicating that the login was unsuccessful
-     */
-    private void showLoginFailedMessage() {
-        //mNetworkFailureTextView.setVisibility(View.INVISIBLE);
-        //mLoginFailureTextView.setVisibility(View.VISIBLE);
+    private void showSnackbar (String message) {
+        Snackbar.make(findViewById(R.id.activity_login_layout), message, Snackbar.LENGTH_SHORT ).show();
     }
 
-    /**
-     * Show a text indicating that a failure related to network has occurred
-     */
-    private void showNetworkFailureMessage() {
-        //mLoginFailureTextView.setVisibility(View.INVISIBLE);
-        //mNetworkFailureTextView.setVisibility(View.VISIBLE);
+    public void startRegistration(View view) {
+        Intent registerIntent = new Intent(this, RegisterActivity.class);
+        startActivity(registerIntent);
     }
     //**********************************************************************************************
 }

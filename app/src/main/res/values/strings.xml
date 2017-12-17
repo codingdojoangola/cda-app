@@ -96,10 +96,12 @@
     <!--*************************************** ABOUT ****************************************** -->
 
 
+
     <!--***************************************** CDA ****************************************** -->
 
 
     <!--*************************************** MEMBERS **************************************** -->
+
 
 
     <!--*********************************** NOTIFICATION *************************************** -->
@@ -125,6 +127,7 @@
     <!-- :::::::::::: PROFILE ::::::::::::::: -->
 
 
+
     <!-- ::::::::::::  MENU ::::::::::::::: -->
     <string name="project">Projecto</string>
     <string name="member">Membros</string>
@@ -141,6 +144,102 @@
     <string name="utilizador">Utilizador</string>
     <string name="texto">Texto</string>
     <string name="message">Mensagem</string>
+    <string name="title_activity_settings">Settings</string>
 
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">Geral</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">Albano Vaz</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Dados &amp; Sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notificações</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="pref_header_name">Conta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="white_belt_text">Cinto Branco</string>
+    <string name="yellow_belt_text">Cinto Amarelo</string>
+    <string name="orange_belt_text">Cinto Laranja</string>
+    <string name="green_belt_text">Cinto Verde</string>
+    <string name="blue_belt_text">Cinto Azul</string>
+    <string name="brown_belt_text">Cinto Castanho</string>
+    <string name="black_belt_text">Cinto Negro</string>
+    <string name="belt_text">Cinto</string>
+    <string name="projects_text">Projetos</string>
+    <string name="concluded_projects_text">Projetos Concluídos</string>
+    <string name="programming_languages_text">Linguagens</string>
+    <string name="technologies_text">Tecnologias</string>
+    <string name="disponibility_text">Disponibilidade</string>
+    <string name="full_time_text">Fulltime</string>
+    <string name="part_time_text">Part-Time</string>
+    <string name="freelancer_text">Freelancer</string>
+
+    <string name="github_app_id">3a06671caef1347a8243</string>
+    <string name="github_app_secret">7ad3a7392c86b5f9ee4c7fd2864b91ddba8fbf8d</string>
+    <string name="github_app_url">https://codingdojo-79fd2.firebaseapp.com/__/auth/handler</string>
     <!-- *************************************************************************************** -->
 </resources>
