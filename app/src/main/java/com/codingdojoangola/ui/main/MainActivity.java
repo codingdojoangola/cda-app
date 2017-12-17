@@ -30,6 +30,7 @@ import java.util.List;
 
 //:::::::::::::::: Same project import
 import com.codingdojoangola.models.split.ItemDrawer;
+import com.codingdojoangola.ui.chat.ChatUserActivity;
 import com.codingdojoangola.ui.notifications.QuitApplication;
 import com.codingdojoangola.ui.profile.ProfileActivity;
 import com.codingdojoangola.ui.settings.SettingsActivity;
@@ -132,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
 
         switch (mainDrawer.get(positionSplit).getChoiceType()){
 
+            case ""+R.string.chat:
+                Intent intent =  new Intent(MainActivity.this, ChatUserActivity.class);
+                startActivity(intent);
+                break;
             case ""+R.string.settings:
                 Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(settingsIntent);

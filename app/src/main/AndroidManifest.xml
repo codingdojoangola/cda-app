@@ -11,7 +11,19 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- *************************************************************************************** -->
     <!-- ********************************** APPLICATION **************************************** -->
     <application
         android:name=".app.CDA"
@@ -22,6 +34,16 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
 
+        <!-- ********************* PROVIDERS ************************** -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
         <!-- ******************** ACTIVITY LAUNCH ******************** -->
         <activity
             android:name=".ui.launch.SplashActivity"
@@ -73,7 +95,15 @@
 
         <!-- ************************************************************************************ -->
 
-
+        <activity
+            android:label="Desenvolvedores"
+            android:theme="@style/AppThemeChat"
+            android:name=".ui.chat.ChatUserActivity" />
+        <activity
+            android:label="Chat cDa"
+            android:theme="@style/AppThemeChat"
+            android:name=".ui.chat.ChatActivity" />
+        <activity android:name=".ui.chat.ImagemActivity" />
     </application>
     <!-- *************************************************************************************** -->
 </manifest>
