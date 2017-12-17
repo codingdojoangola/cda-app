@@ -140,6 +140,7 @@
     <string name="perfil">Perfil</string>
     <string name="utilizador">Utilizador</string>
     <string name="texto">Texto</string>
+    <string name="message">Mensagem</string>
 
     <!-- *************************************************************************************** -->
 </resources>

@@ -216,5 +216,5 @@ public class ImagemActivity extends AppCompatActivity implements View.OnTouchLis
         float y = event.getY(0) + event.getY(1);
         point.set(x / 2, y / 2);
     }
-    
+
 }
