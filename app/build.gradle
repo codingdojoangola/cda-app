@@ -47,6 +47,7 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.2.0'
     //SelectableRoundedImageView is available through Gradle
 
+
     // Fire Base
     compile 'com.google.firebase:firebase-crash:11.6.2'
     compile 'com.google.firebase:firebase-database:11.6.2'
@@ -59,4 +60,3 @@ apply plugin: 'com.google.gms.google-services'
 repositories {
     mavenCentral()
 }
-apply plugin: 'kotlin-android-extensions'

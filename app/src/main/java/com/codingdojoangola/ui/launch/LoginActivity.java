@@ -352,5 +352,10 @@ public class LoginActivity extends AppCompatActivity
         View view = View.inflate(LoginActivity.this, R.layout.activity_login, null);
         Snackbar.make(view, message, Snackbar.LENGTH_SHORT ).show();
     }
+
+    public void startRegistration(View view) {
+        Intent registerIntent = new Intent(this, RegisterActivity.class);
+        startActivity(registerIntent);
+    }
     //**********************************************************************************************
 }

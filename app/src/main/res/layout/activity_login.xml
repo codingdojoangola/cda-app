@@ -102,6 +102,7 @@
                     android:layout_marginStart="5dp"
                     android:src="@mipmap/arrow_double_rigth_small"
                     android:layout_gravity="center"
+                    android:onClick="startRegistration"
                     android:contentDescription="@string/login_description"/>
             </LinearLayout>
         </LinearLayout>
