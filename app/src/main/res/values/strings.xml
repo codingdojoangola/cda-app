@@ -136,6 +136,10 @@
 
     <string name="menu_description">Icon</string>
     <string name="sem_conversas_ainda">Sem conversas ainda</string>
+    <string name="configuration">Configuração</string>
+    <string name="perfil">Perfil</string>
+    <string name="utilizador">Utilizador</string>
+    <string name="texto">Texto</string>
 
     <!-- *************************************************************************************** -->
 </resources>

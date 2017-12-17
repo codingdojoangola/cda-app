@@ -4,13 +4,13 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="Configuração"
+        android:title="@string/configuration"
         android:icon="@mipmap/settings"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_about"
         android:orderInCategory="100"
-        android:title="Perfil"
+        android:title="@string/perfil"
         android:icon="@mipmap/account_circle_white"
         app:showAsAction="never" />
 </menu>
