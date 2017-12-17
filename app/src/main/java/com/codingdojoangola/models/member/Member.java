@@ -1,4 +1,4 @@
-package com.codingdojoangola.models;
+package com.codingdojoangola.models.member;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 

@@ -57,7 +57,8 @@
         <Button
             android:id="@+id/button_login_gitHub"
             style="@style/button_style_gitHub"
-            android:text="@string/github" />
+            android:text="@string/github"
+            android:onClick="sendLoginGithubData"/>
 
         <!-- :::::::::::::::::::::::: NOT A MEMBER - REGISTER ::::::::::::: -->
         <LinearLayout

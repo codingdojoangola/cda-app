@@ -36,6 +36,7 @@ import com.codingdojoangola.ui.split.MainDrawer;
 import com.codingdojoangola.ui.split.MenuAdapter;
 
 import com.codingdojoangola.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -138,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
             case ""+R.string.exit:
                 // Exit App
+                FirebaseAuth.getInstance().signOut();
                 QuitApplication.newInstance(this).show(transaction, "Alert_Dialog" );
                 break;
 

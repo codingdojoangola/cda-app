@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.codingdojoangola.R;
-import com.codingdojoangola.models.BeltConverter;
-import com.codingdojoangola.models.DisponibilityConverter;
-import com.codingdojoangola.models.Member;
+import com.codingdojoangola.models.member.BeltConverter;
+import com.codingdojoangola.models.member.DisponibilityConverter;
+import com.codingdojoangola.models.member.Member;
 
 import org.parceler.Parcels;
 

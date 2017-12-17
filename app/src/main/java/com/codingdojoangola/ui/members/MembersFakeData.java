@@ -1,12 +1,10 @@
 package com.codingdojoangola.ui.members;
 
 
-import com.codingdojoangola.models.Member;
-import com.codingdojoangola.models.Member.BeltColor;
+import com.codingdojoangola.models.member.Member;
+import com.codingdojoangola.models.member.Member.BeltColor;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**

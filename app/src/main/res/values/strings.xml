@@ -154,5 +154,8 @@
     <string name="part_time_text">Part-Time</string>
     <string name="freelancer_text">Freelancer</string>
 
+    <string name="github_app_id">3a06671caef1347a8243</string>
+    <string name="github_app_secret">7ad3a7392c86b5f9ee4c7fd2864b91ddba8fbf8d</string>
+    <string name="github_app_url">https://codingdojo-79fd2.firebaseapp.com/__/auth/handler</string>
     <!-- *************************************************************************************** -->
 </resources>

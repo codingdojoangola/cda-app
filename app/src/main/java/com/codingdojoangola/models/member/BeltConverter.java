@@ -1,4 +1,4 @@
-package com.codingdojoangola.models;
+package com.codingdojoangola.models.member;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;

@@ -1,7 +1,6 @@
 package com.codingdojoangola.ui.members;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -10,10 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.codingdojoangola.R;
-import com.codingdojoangola.models.Member;
+import com.codingdojoangola.models.member.Member;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by henrick on 12/16/17.
