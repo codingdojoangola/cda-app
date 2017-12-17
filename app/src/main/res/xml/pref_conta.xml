@@ -3,17 +3,13 @@
     <PreferenceCategory
         android:title="@string/pref_header_name"
         android:key="pref_key_conta">
-        <Preference
+        <PreferenceScreen
             android:key="pref_key_conta"
             android:title="@string/pref_default_display_name"
             android:summary="@string/username">
             <intent android:action="android.intent.action.PICK"
                 android:targetClass="@string/username"/>
-        </Preference>
-
-        <Preference
-            android:title="Apagar Perfil"
-            android:key="key_delete_account"/>
+        </PreferenceScreen>
     </PreferenceCategory>
 
 

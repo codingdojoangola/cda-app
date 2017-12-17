@@ -47,8 +47,6 @@ import java.util.List;
  */
 public class SettingsActivity extends AppCompatPreferenceActivity {
 
-    private static FirebaseAuth mFirebaseAuth;
-
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -134,7 +132,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mFirebaseAuth = FirebaseAuth.getInstance();
         setupActionBar();
     }
 
@@ -300,27 +297,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("example_text"));
+            //bindPreferenceSummaryToValue(findPreference("example_text"));
             bindPreferenceSummaryToValue(findPreference("pref_key_conta"));
-            Preference deleteAccountPrefernce = findPreference("key_delete_account");
-            deleteAccountPrefernce.setOnPreferenceClickListener(preference -> {
-                DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference();
-                if (mFirebaseAuth.getCurrentUser() != null) {
-                    mDatabaseReference.child("users")
-                            .child(mFirebaseAuth.getCurrentUser().getUid())
-                            .removeValue();
-
-                    mFirebaseAuth.getCurrentUser().delete().addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            mFirebaseAuth.signOut();
-                            Toast.makeText(getActivity(), "User account deleted.", Toast.LENGTH_SHORT).show();
-                            getActivity().startActivity(new Intent(getActivity(), LoginActivity.class));
-                        }
-                    });
-                }
-
-                return true;
-            });
         }
 
         @Override
