@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -28,6 +29,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity{
 
@@ -62,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity{
         userName =  findViewById(R.id.editText_register_input_name);
         inputEmail =  findViewById(R.id.editText_register_input_email);
         inputPassword =  findViewById(R.id.editText_register_input_password);
-        progressBar =  findViewById(R.id.progressBar);
+        progressBar =  findViewById(R.id.register_progress);
         Terms = findViewById(R.id.checkbox_register_accept_term);
 //        btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
@@ -73,6 +75,11 @@ public class RegisterActivity extends AppCompatActivity{
                 String email = inputEmail.getText().toString().trim();
                 String name = userName.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
+
+
+                if (Terms.isChecked()) {
+                    Terms.setChecked(true);
+                }
 
                 if (TextUtils.isEmpty(name)){
                     Toast.makeText(getApplicationContext(), "Escreve o nome de usuário!", Toast.LENGTH_SHORT).show();
@@ -93,7 +100,9 @@ public class RegisterActivity extends AppCompatActivity{
                     return;
                 }
 
-//                progressBar.setVisibility(View.VISIBLE);
+
+
+                progressBar.setVisibility(View.VISIBLE);
                 //create user
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
@@ -108,14 +117,36 @@ public class RegisterActivity extends AppCompatActivity{
                                     Toast.makeText(RegisterActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                                    finish();
+                                    if (firebaseAuth.getCurrentUser() != null ){
+                                        sendEmailVerification();
+                                    }
                                 }
                             }
                         });
 
             }
         });
+    }
+    private void sendEmailVerification() {
+        firebaseAuth.getCurrentUser().sendEmailVerification()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+
+                        if (task.isSuccessful()) {
+                            Toast.makeText(RegisterActivity.this,
+                                    "Verification email sent to " + firebaseAuth.getCurrentUser().getEmail(),
+                                    Toast.LENGTH_SHORT).show();
+                            Intent registerIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                            startActivity(registerIntent);
+                        } else {
+                            Toast.makeText(RegisterActivity.this,
+                                    "Failed to send verification email.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     @Override
@@ -124,7 +155,10 @@ public class RegisterActivity extends AppCompatActivity{
         progressBar.setVisibility(View.GONE);
     }
 
-
+    public void startLogin(View view) {
+        Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
+    }
 
 
     //*********************** Override Methods and Callbacks (public and Private) ******************

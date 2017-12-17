@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_key_conta"
+        android:title="@string/pref_header_name">
+        <!--<Preference-->
+            <!--android:key="pref_key_conta"-->
+            <!--android:summary="@string/username"-->
+            <!--android:title="@string/pref_default_display_name">-->
+            <!--<intent-->
+                <!--android:action="android.intent.action.PICK"-->
+                <!--android:targetClass="@string/username" />-->
+        <!--</Preference>-->
+
+        <EditTextPreference
+                android:capitalize="words"
+                android:defaultValue="@string/pref_default_display_name"
+                android:inputType="textCapWords"
+                android:key="example_text"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="@string/pref_title_display_name" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

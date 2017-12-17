@@ -47,6 +47,7 @@ dependencies {
     //SelectableRoundedImageView is available through Gradle
     compile 'com.squareup.picasso:picasso:2.5.2'
 
+    //preference library
 
     // Fire Base
     compile 'com.google.firebase:firebase-crash:11.6.2'
