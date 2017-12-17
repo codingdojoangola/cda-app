@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="0dp"
-                android:text="Name"
+                android:text="@string/name"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toRightOf="@+id/chat_persion_image"
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="8dp"
-                android:text="Email"
+                android:text="@string/email"
                 app:layout_constraintLeft_toLeftOf="@+id/chat_persion_name"
                 app:layout_constraintTop_toBottomOf="@+id/chat_persion_name" />
         </android.support.constraint.ConstraintLayout>
