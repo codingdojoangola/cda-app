@@ -96,10 +96,12 @@
     <!--*************************************** ABOUT ****************************************** -->
 
 
+
     <!--***************************************** CDA ****************************************** -->
 
 
     <!--*************************************** MEMBERS **************************************** -->
+
 
 
     <!--*********************************** NOTIFICATION *************************************** -->
@@ -125,15 +127,23 @@
     <!-- :::::::::::: PROFILE ::::::::::::::: -->
 
 
+
     <!-- ::::::::::::  MENU ::::::::::::::: -->
     <string name="project">Projecto</string>
     <string name="member">Membros</string>
     <string name="cda">CDA</string>
+    <string name="chat">Chat</string>
     <string name="settings">Definições</string>
     <string name="about">Acerca da App</string>
     <string name="exit">Sair</string>
 
     <string name="menu_description">Icon</string>
+    <string name="sem_conversas_ainda">Sem conversas ainda</string>
+    <string name="configuration">Configuração</string>
+    <string name="perfil">Perfil</string>
+    <string name="utilizador">Utilizador</string>
+    <string name="texto">Texto</string>
+    <string name="message">Mensagem</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->

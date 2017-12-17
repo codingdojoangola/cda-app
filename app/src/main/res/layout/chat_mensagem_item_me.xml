@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fetch_chat_sender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/utilizador"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:layout_marginRight="15dp"
+        android:minWidth="170dp" />
+
+    <FrameLayout
+        android:id="@+id/chat_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/sent_message">
+
+        <TextView
+            android:id="@+id/fetch_chat_messgae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto"
+            android:minWidth="170dp"
+            />
+        <ImageView
+            android:id="@+id/chat_uploaded_image_outgoing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:minWidth="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/attachment"
+            android:visibility="visible" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="2dp"
+        android:gravity="end"
+        android:paddingRight="10dp"
+        android:text="12:20 AM"
+        android:textSize="11sp" />
+</LinearLayout>
