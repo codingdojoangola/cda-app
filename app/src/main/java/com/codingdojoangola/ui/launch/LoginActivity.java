@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.app.ProgressDialog;
 
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -50,6 +51,8 @@ public class LoginActivity extends AppCompatActivity
     private AutoCompleteTextView mEmailAutoComplete;
     private EditText mPasswordEditText;
     private ProgressDialog mLoginProgressDialog;
+    public static int deviceWidth;
+
 
     //*********************************** ON CREATE *********************************************
     @Override
@@ -70,6 +73,8 @@ public class LoginActivity extends AppCompatActivity
 
         mLoginProgressDialog = new ProgressDialog(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
+        DisplayMetrics metrics = getApplicationContext().getResources().getDisplayMetrics();
+        deviceWidth = metrics.widthPixels;
     }
 
     //************************************** PUBLIC METHODS ****************************************

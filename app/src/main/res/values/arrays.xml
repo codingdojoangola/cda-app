@@ -99,6 +99,7 @@
         <item>@mipmap/project</item>
         <item>@mipmap/member</item>
         <item>@mipmap/cda</item>
+        <item>@drawable/ic_action_chat</item>
         <item>@mipmap/settings</item>
         <item>@mipmap/info</item>
         <item>@mipmap/logout</item>
@@ -108,6 +109,7 @@
         <item>@string/project</item>
         <item>@string/member</item>
         <item>@string/cda</item>
+        <item>@string/chat</item>
         <item>@string/settings</item>
         <item>@string/about</item>
         <item>@string/exit</item>

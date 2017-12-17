@@ -96,12 +96,10 @@
     <!--*************************************** ABOUT ****************************************** -->
 
 
-
     <!--***************************************** CDA ****************************************** -->
 
 
     <!--*************************************** MEMBERS **************************************** -->
-
 
 
     <!--*********************************** NOTIFICATION *************************************** -->
@@ -127,11 +125,11 @@
     <!-- :::::::::::: PROFILE ::::::::::::::: -->
 
 
-
     <!-- ::::::::::::  MENU ::::::::::::::: -->
     <string name="project">Projecto</string>
     <string name="member">Membros</string>
     <string name="cda">CDA</string>
+    <string name="chat">Chat</string>
     <string name="settings">Definições</string>
     <string name="about">Acerca da App</string>
     <string name="exit">Sair</string>
