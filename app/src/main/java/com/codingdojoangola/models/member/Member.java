@@ -116,7 +116,7 @@ public class Member {
         return mPhotoUri;
     }
 
-    public void setPhotoUri(String mPhotoUri) {
-        this.mPhotoUri = mPhotoUri;
+    public void setPhotoUri(String photoUri) {
+        mPhotoUri = photoUri;
     }
 }

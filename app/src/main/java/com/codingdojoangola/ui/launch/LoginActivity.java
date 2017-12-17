@@ -217,7 +217,7 @@ public class LoginActivity extends AppCompatActivity
 
                     @Override
                     public void onError(Throwable e) {
-                        showSnackbar( e.getMessage() );
+                        //showSnackbar( e.getMessage() );
                     }
 
                     @Override

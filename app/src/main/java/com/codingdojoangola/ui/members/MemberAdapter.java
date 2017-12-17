@@ -1,15 +1,18 @@
 package com.codingdojoangola.ui.members;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.codingdojoangola.R;
 import com.codingdojoangola.models.member.Member;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -50,6 +53,13 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
 
         String langs = TextUtils.join(", ", programmingLangs.toArray());
         holder.mProgrammingLanguagesTextView.setText(langs);
+
+        String photoUri = currentMember.getPhotoUri();
+        if (photoUri != null && !TextUtils.isEmpty(photoUri)) {
+            Picasso.with(mContext).load(photoUri).into(holder.mProfileImageView);
+        } else {
+            holder.mProfileImageView.setImageResource(R.drawable.ic_default_profile_image_100dp);
+        }
     }
 
     @Override
@@ -68,6 +78,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
 
     class MemberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        private final ImageView mProfileImageView;
         private TextView mNameTextView;
         private TextView mProgrammingLanguagesTextView;
         private TextView mConcludedProjectsNumber;
@@ -75,6 +86,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberView
         public MemberViewHolder(View itemView) {
             super(itemView);
 
+            mProfileImageView = itemView.findViewById(R.id.image_profile);
             mNameTextView = itemView.findViewById(R.id.text_name);
             mProgrammingLanguagesTextView = itemView.findViewById(R.id.text_programming_languages);
             mConcludedProjectsNumber = itemView.findViewById(R.id.text_concluded_projects_number);
