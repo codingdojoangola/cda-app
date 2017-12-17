@@ -1,16 +1,16 @@
-package com.codingdojoangola.models.split;
+package com.codingdojoangola.models.chat;
 
 
-public class Utilizador {
+public class User {
 
     private String name;
     private String email;
     private String image;
     public String id;
-    public Utilizador(){
+    public User(){
     }
 
-    public Utilizador(String name, String email, String image) {
+    public User(String name, String email, String image) {
         this.name = name;
         this.email = email;
         this.image = image;

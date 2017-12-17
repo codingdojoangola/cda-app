@@ -41,7 +41,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.codingdojoangola.R;
 import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
-import com.codingdojoangola.models.split.Conversa;
+import com.codingdojoangola.models.chat.Message;
 import com.codingdojoangola.utils.DataActual;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -68,7 +68,7 @@ public class ChatActivity extends AppCompatActivity {
     public RecyclerView recyclerView;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference dbRef, dbRefDois;
-    private FirebaseRecyclerAdapter<Conversa, ChatConversationViewHolder> mFirebaseAdapter;
+    private FirebaseRecyclerAdapter<Message, ChatConversationViewHolder> mFirebaseAdapter;
     public LinearLayoutManager mLinearLayoutManager;
     static String nomeEmissor;
     private static String userID;
@@ -233,10 +233,10 @@ public class ChatActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
-        mFirebaseAdapter = new FirebaseRecyclerAdapter<Conversa, ChatConversationViewHolder>(Conversa.class, R.layout.chat_mensagem_item_sender, ChatConversationViewHolder.class, dbRef) {
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<Message, ChatConversationViewHolder>(Message.class, R.layout.chat_mensagem_item_sender, ChatConversationViewHolder.class, dbRef) {
 
 
-            public void populateViewHolder(final ChatConversationViewHolder viewHolder, Conversa model, final int position) {
+            public void populateViewHolder(final ChatConversationViewHolder viewHolder, Message model, final int position) {
 
                 viewHolder.getEmissor(model.getSender());
                 viewHolder.getMensagem(model.getMessage(), model.getDate_time());

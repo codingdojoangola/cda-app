@@ -1,4 +1,4 @@
-package com.codingdojoangola.models.split;
+package com.codingdojoangola.models.chat;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by jadev on 14-12-2017.
  */
 
-public class Conversa implements Parcelable{
+public class Message implements Parcelable{
 
     @SerializedName("message")
     private String message;
@@ -18,29 +18,29 @@ public class Conversa implements Parcelable{
     @SerializedName("date_time")
     private String date_time;
 
-    public static final Creator<Conversa> CREATOR = new Creator<Conversa>() {
+    public static final Creator<Message> CREATOR = new Creator<Message>() {
         @Override
-        public Conversa createFromParcel(Parcel in) {
-            return new Conversa(in);
+        public Message createFromParcel(Parcel in) {
+            return new Message(in);
         }
 
         @Override
-        public Conversa[] newArray(int size) {
-            return new Conversa[size];
+        public Message[] newArray(int size) {
+            return new Message[size];
         }
     };
 
-    public Conversa(){
+    public Message(){
         
     }
 
-    protected Conversa(Parcel in) {
+    protected Message(Parcel in) {
         sender = in.readString();
         message = in.readString();
         date_time = in.readString();
     }
 
-    public Conversa(String message, String sender, String date_time) {
+    public Message(String message, String sender, String date_time) {
         this.message = message;
         this.sender = sender;
         this.date_time = date_time;

@@ -10,10 +10,9 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 import com.codingdojoangola.R;
-import com.codingdojoangola.models.split.Conversa;
+import com.codingdojoangola.models.chat.Message;
 import com.codingdojoangola.ui.chat.ChatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -43,7 +42,7 @@ public class FirebaseService extends FirebaseMessagingService {
             name = remoteMessage.getData().get("name");
 
             // Create new message and assign value to it
-            Conversa message = new Conversa();
+            Message message = new Message();
             message.setSender(userId);
             message.setMessage(messageContent);
             message.setDate_time(timestamp);
@@ -111,7 +110,7 @@ public class FirebaseService extends FirebaseMessagingService {
      *
      * @param message message object
      */
-    private void sendNotification(Conversa message) {
+    private void sendNotification(Message message) {
         Intent intent = new Intent(this, ChatActivity.class);
         intent.putExtra("message", message);
         intent.putExtra("id", message.getSender());

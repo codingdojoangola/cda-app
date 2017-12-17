@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.codingdojoangola.R;
 import com.codingdojoangola.data.sharedpreferences.UserSharedPreferences;
-import com.codingdojoangola.models.split.Utilizador;
+import com.codingdojoangola.models.chat.User;
 import com.codingdojoangola.utils.CircleTransform;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DataSnapshot;
@@ -31,7 +31,7 @@ public class ChatUserActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference myRef;
-    public FirebaseRecyclerAdapter<Utilizador, ShowChatViewHolder> mFirebaseAdapter;
+    public FirebaseRecyclerAdapter<User, ShowChatViewHolder> mFirebaseAdapter;
     ProgressBar progressBar;
     LinearLayoutManager mLinearLayoutManager;
 
@@ -60,9 +60,9 @@ public class ChatUserActivity extends AppCompatActivity {
         progressBar.setVisibility(ProgressBar.VISIBLE);
 
 
-        mFirebaseAdapter = new FirebaseRecyclerAdapter<Utilizador, ChatUserActivity.ShowChatViewHolder>(Utilizador.class, R.layout.show_chat_single_item, ChatUserActivity.ShowChatViewHolder.class, myRef) {
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<User, ChatUserActivity.ShowChatViewHolder>(User.class, R.layout.show_chat_single_item, ChatUserActivity.ShowChatViewHolder.class, myRef) {
 
-            public void populateViewHolder(final ChatUserActivity.ShowChatViewHolder viewHolder, Utilizador model, final int position) {
+            public void populateViewHolder(final ChatUserActivity.ShowChatViewHolder viewHolder, User model, final int position) {
                 //Log.d("LOGGED", "populateViewHolder Called: ");
                 progressBar.setVisibility(ProgressBar.INVISIBLE);
 

@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.codingdojoangola.R;
-import com.codingdojoangola.models.split.DadosChat;
+import com.codingdojoangola.models.chat.ChatData;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,7 +24,7 @@ public class DadosChatActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference myRef;
-    private FirebaseRecyclerAdapter<DadosChat, ShowDataViewHolder> mFirebaseAdapter;
+    private FirebaseRecyclerAdapter<ChatData, ShowDataViewHolder> mFirebaseAdapter;
 
     public DadosChatActivity() {
     }
@@ -47,11 +47,11 @@ public class DadosChatActivity extends AppCompatActivity {
         super.onStart();
 
         //Log.d("LOGGED", "IN onStart ");
-        mFirebaseAdapter = new FirebaseRecyclerAdapter<DadosChat, ShowDataViewHolder>
-                (DadosChat.class, R.layout.dados_chat_item, DadosChatActivity.ShowDataViewHolder.class, myRef)
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<ChatData, ShowDataViewHolder>
+                (ChatData.class, R.layout.dados_chat_item, DadosChatActivity.ShowDataViewHolder.class, myRef)
         {
 
-            public void populateViewHolder(final DadosChatActivity.ShowDataViewHolder viewHolder, DadosChat model, final int position) {
+            public void populateViewHolder(final DadosChatActivity.ShowDataViewHolder viewHolder, ChatData model, final int position) {
                 viewHolder.Image_URL(model.getImagemUrl());
                 viewHolder.Image_Title(model.getImagemTitulo());
 

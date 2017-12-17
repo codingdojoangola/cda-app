@@ -1,11 +1,11 @@
-package com.codingdojoangola.models.split;
+package com.codingdojoangola.models.chat;
 
 
-public class DadosChat {
+public class ChatData {
 
     private String imagemUrl, imagemTitulo;
 
-    public DadosChat(String imagemUrl, String imagemTitulo) {
+    public ChatData(String imagemUrl, String imagemTitulo) {
         this.imagemUrl = imagemUrl;
         this.imagemTitulo = imagemTitulo;
     }
