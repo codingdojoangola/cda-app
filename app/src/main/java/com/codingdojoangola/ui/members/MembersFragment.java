@@ -98,7 +98,8 @@ public class MembersFragment implements MemberAdapter.MemberListItemClickListene
 
         String id = membersDir.push().getKey();
         Member member = new Member(id, "Henrick Kakutalua", Member.BeltColor.WHITE, disponibilities,
-                12, programmingLangs, technologies, "");
+                12, programmingLangs, technologies,
+                "https://avatars2.githubusercontent.com/u/4200487?s=400&v=4");
 
         membersDir.child(id).setValue(member);
     }

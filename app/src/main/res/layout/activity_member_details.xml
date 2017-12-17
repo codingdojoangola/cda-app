@@ -58,15 +58,16 @@
             app:layout_constraintRight_toRightOf="@id/image_profile"
             app:layout_constraintTop_toBottomOf="@id/text_name" />
 
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/frame_belt"
             android:layout_width="140dp"
-            android:layout_height="3dp"
+            android:layout_height="8dp"
             android:layout_marginTop="4dp"
             app:layout_constraintTop_toBottomOf="@id/text_belt"
             app:layout_constraintLeft_toLeftOf="@id/image_profile"
             app:layout_constraintRight_toRightOf="@id/image_profile"
-            android:background="@drawable/border">
+            android:background="@drawable/border"
+            android:padding="1dp">
 
             <!-- Belt Color -->
             <View
@@ -75,7 +76,7 @@
                 android:layout_height="match_parent"
                 tools:background="@color/brown" />
 
-        </FrameLayout>
+        </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
 

@@ -40,7 +40,6 @@ public class CDA extends Application {
 
         NetworkServer.initInstance(this);
         MainDrawer.initInstance(this);
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
     }
 
     //************************* GET AND SET **************************

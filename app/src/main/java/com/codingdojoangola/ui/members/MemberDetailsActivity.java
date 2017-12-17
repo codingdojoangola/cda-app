@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.codingdojoangola.R;
 import com.codingdojoangola.models.member.BeltConverter;
 import com.codingdojoangola.models.member.DisponibilityConverter;
 import com.codingdojoangola.models.member.Member;
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
@@ -27,6 +29,7 @@ public class MemberDetailsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        ImageView profileImageView = findViewById(R.id.image_profile);
         TextView nameTextView = findViewById(R.id.text_name);
         TextView beltTextView = findViewById(R.id.text_belt);
         View beltColorView = findViewById(R.id.view_belt_color);
@@ -53,6 +56,13 @@ public class MemberDetailsActivity extends AppCompatActivity {
             availabilityTextView.setText(availabilities);
             programmingLangsTextView.setText(programmingLangs);
             technologiesTextView.setText(technologies);
+
+            String photoUri = member.getPhotoUri();
+            if (photoUri != null && !TextUtils.isEmpty(photoUri)) {
+                Picasso.with(this).load(photoUri).into(profileImageView);
+            } else {
+                profileImageView.setImageResource(R.drawable.ic_default_profile_image_100dp);
+            }
         }
     }
 }
