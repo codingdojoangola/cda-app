@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 //:::::::::::::::: Import from third parties (com, junit, net, org)
@@ -70,16 +71,20 @@ public class RegisterActivity extends AppCompatActivity{
             public void onClick(View v) {
 
                 String email = inputEmail.getText().toString().trim();
+                String name = userName.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
-                
 
+                if (TextUtils.isEmpty(name)){
+                    Toast.makeText(getApplicationContext(), "Escreve o nome de usuário!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Escreva o seu email!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Escreva a sua password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -103,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity{
                                     Toast.makeText(RegisterActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                     finish();
                                 }
                             }
