@@ -54,13 +54,21 @@
         <!-- ******************* ACTIVITY MAIN CDA ******************* -->
         <activity android:name=".ui.main.MainActivity"
             android:label="@string/project"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
 
         <!-- ******************* ACTIVITY MAIN CDA ******************* -->
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".ui.main.MainActivity">
+        </activity>
+
+        <activity android:name=".ui.members.MemberDetailsActivity"
+            android:parentActivityName=".ui.main.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.main.MainActivity" />
         </activity>
 
         <!-- ************************************************************************************ -->
