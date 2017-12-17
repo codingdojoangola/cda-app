@@ -47,6 +47,7 @@ dependencies {
     compile 'com.google.firebase:firebase-database:11.6.2'
     compile 'com.google.firebase:firebase-auth:11.6.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.github.alorma:github-sdk:3.2.5'
 }
 // Add to the bottom of the file - Fire Base
 apply plugin: 'com.google.gms.google-services'
