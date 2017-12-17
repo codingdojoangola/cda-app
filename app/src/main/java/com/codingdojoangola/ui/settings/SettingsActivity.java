@@ -1,6 +1,7 @@
 package com.codingdojoangola.ui.settings;
 
 import android.annotation.TargetApi;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -12,6 +13,8 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -19,8 +22,15 @@ import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.widget.Toast;
 
 import com.codingdojoangola.R;
+import com.codingdojoangola.ui.launch.LoginActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -36,6 +46,8 @@ import java.util.List;
  * API Guide</a> for more information on developing a Settings UI.
  */
 public class SettingsActivity extends AppCompatPreferenceActivity {
+
+    private static FirebaseAuth mFirebaseAuth;
 
     /**
      * A preference value change listener that updates the preference's summary
@@ -122,6 +134,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mFirebaseAuth = FirebaseAuth.getInstance();
         setupActionBar();
     }
 
@@ -274,6 +287,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class NamePreferenceFragment extends PreferenceFragment {
+
+
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -286,6 +302,25 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("example_text"));
             bindPreferenceSummaryToValue(findPreference("pref_key_conta"));
+            Preference deleteAccountPrefernce = findPreference("key_delete_account");
+            deleteAccountPrefernce.setOnPreferenceClickListener(preference -> {
+                DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+                if (mFirebaseAuth.getCurrentUser() != null) {
+                    mDatabaseReference.child("users")
+                            .child(mFirebaseAuth.getCurrentUser().getUid())
+                            .removeValue();
+
+                    mFirebaseAuth.getCurrentUser().delete().addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            mFirebaseAuth.signOut();
+                            Toast.makeText(getActivity(), "User account deleted.", Toast.LENGTH_SHORT).show();
+                            getActivity().startActivity(new Intent(getActivity(), LoginActivity.class));
+                        }
+                    });
+                }
+
+                return true;
+            });
         }
 
         @Override

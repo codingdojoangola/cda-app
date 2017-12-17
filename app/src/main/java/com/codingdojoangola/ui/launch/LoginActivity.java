@@ -349,8 +349,7 @@ public class LoginActivity extends AppCompatActivity
     }
 
     private void showSnackbar (String message) {
-        View view = View.inflate(LoginActivity.this, R.layout.activity_login, null);
-        Snackbar.make(view, message, Snackbar.LENGTH_SHORT ).show();
+        Snackbar.make(findViewById(R.id.activity_login_layout), message, Snackbar.LENGTH_SHORT ).show();
     }
 
     public void startRegistration(View view) {

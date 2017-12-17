@@ -4,7 +4,8 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_background_one">
+    android:background="@drawable/splash_background_one"
+    android:id="@+id/activity_login_layout">
 
     <!-- **************************************************************************************** -->
     <LinearLayout
