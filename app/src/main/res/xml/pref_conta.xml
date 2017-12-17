@@ -9,18 +9,11 @@
             android:summary="@string/username">
             <intent android:action="android.intent.action.PICK"
                 android:targetClass="@string/username"/>
+        </Preference>
 
-    </Preference>
-        <PreferenceScreen
-            android:title="Apagar Perfil">
-            <!--android:key="pref_key_logout"-->
-
-            <intent android:targetPackage="com.codingdojoangola"
-                android:targetClass=".launch.RegisterActivity"/>
-                <!--android:targetClass="RegisterActivity"-->
-                <!--android:targetPackage="com.codingdojoangola"-->
-
-        </PreferenceScreen>
+        <Preference
+            android:title="Apagar Perfil"
+            android:key="key_delete_account"/>
     </PreferenceCategory>
 
 
